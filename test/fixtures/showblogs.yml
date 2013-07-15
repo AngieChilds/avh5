@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  rundate: 2013-07-11
+  spec: MyString
+  level: MyString
+  note: MyString
+
+two:
+  name: MyString
+  rundate: 2013-07-11
+  spec: MyString
+  level: MyString
+  note: MyString

@@ -1,0 +1,24 @@
+<%= form_for(@showblog) do |f| %>
+  <% if @showblog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@showblog.errors.count, "error") %> prohibited this showblog from being saved:</h2>
+
+      <ul>
+      <% @showblog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+ <% end %>
+<div class="field">
+    Name   : <%= f.text_field :name %>
+    Rundate: <%= f.date_select :rundate %>
+    Spec :   <%= f.select :spec_choice, [ 'Vote', 'English', 'Jumper', 'Racing', 'Western' ], :prompt => 'Select One' %>
+    Level:  <%= f.text_field :level_range  %>
+    Note   :<%= f.text_field :note %>
+   
+    <%= submit_tag 'submit' %>
+  </div>
+<% end %>
+
+

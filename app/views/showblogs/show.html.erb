@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+<h2> <%= @showblog.name %></h2>
+</p>
+
+<p>
+  <b>Rundate:</b>
+  <%= @showblog.rundate %>
+</p>
+
+<p>
+  <b>Spec:</b>
+  <%= @showblog.spec_choice%>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%= @showblog.level_range %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @showblog.note %>
+</p>
+
+<table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
+<tbody>
+
+  <tr>
+    <th width="25%">Player </th>
+    <th width="15%">Event</th>
+    <th width="10%">Vote</th>
+    <th width="15%">Level</th>
+   <th width="10%">Make Other ?</th>
+   <th width="25%">Note</th>
+  </tr>
+</tbody>
+</table>
+
+<%= render @showblog.showruns %>
+
+<h2>Add new player events </h2>
+
+<%= render 'showruns/form' %>
+
+<%= link_to 'Edit', edit_showblog_path(@showblog) %> |
+<%= link_to 'Back', showblogs_path %>
+

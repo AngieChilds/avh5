@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player: MyString
+  vote: MyString
+  event: 1
+  make: false
+  showblog: 
+
+two:
+  player: MyString
+  vote: MyString
+  event: 1
+  make: false
+  showblog: 
