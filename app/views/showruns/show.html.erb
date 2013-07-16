@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Player:</b>
+  <%= @showblog.showrun.player %>
+</p>
+<p>
+  <b>Event:</b>
+  <%= @showblog.showrun.event %>
+</p>
+
+<p>
+  <b>Vote:</b>
+  <%= @showblog.showrun.spec_vote %>
+</p>
+<p>
+  <b>Level:</b>
+  <%= @showblog.showrun.level %>
+</p>
+
+<p>
+  <b>Make:</b>
+  <%= @showblog.showrun.make_other %>
+</p>
+<p>
+  <b>Note Showrun:</b>
+  <%= @showblog.showrun.note_showrun %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_showblog_showrun_path(@showrun) %> |
+<%= link_to 'Back', showblog_showruns_path %>
