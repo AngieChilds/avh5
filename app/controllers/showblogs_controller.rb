@@ -1,5 +1,5 @@
   class ShowblogsController < ApplicationController
-
+before_filter :rundate_past
   http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
     def index
         @showblogs = Showblog.all
@@ -40,6 +40,12 @@ def new
      redirect_to action: :index
      end
     
+def rundate_past
+    @showblog = Showblog.find(params[:id])
+       if @showblog.rundate < Time.now - 480.minutes
+      @showblog.destroy
+    end
+  end
 
    
 end
