@@ -1,7 +1,8 @@
   class ShowblogsController < ApplicationController
   http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
 # before_filter :find_Showblog
-# before_filter :rundate_past, :only => :index
+ before_filter :rundate_past
+ redirect_to action: :index, id: @showblog.id
 
     
     def index
@@ -25,6 +26,8 @@ end
 
 def new
     @showblog = Showblog.new
+    redirect_to action: :index, id: @showblog.id
+ 
    end
 
  def create
