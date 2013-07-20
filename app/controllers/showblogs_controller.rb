@@ -2,7 +2,7 @@
   http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
 # before_filter :find_Showblog
  before_filter :rundate_past
- redirect_to action: :index, id: @showblog.id
+ redirect_to action: :index
 
     
     def index
