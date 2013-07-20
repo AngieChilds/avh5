@@ -1,10 +1,10 @@
   class ShowblogsController < ApplicationController
   http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
 # before_filter :find_Showblog
- before_filter :rundate_past, :only  => :index
+ before_filter :rundate_past, :only => :show
      
     def index
-        @showblogs = Showblog.all
+        @showblogs = Showblog.find:all
     end
 def show
     @showblog = Showblog.find(params[:id])
