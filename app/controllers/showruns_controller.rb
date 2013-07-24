@@ -12,26 +12,7 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
     redirect_to showblog_path(@showblog)
         end
     
-  def destroy
-      @showrun = showblog.showruns.find_by(id: params[:id])
-    @showruns.destroy
-       redirect_to showblog_path(@showblog)
-   end
-
-   def show
-   @showrun = showblog.showruns.find_by(id: params[:id])
-    redirect_to showblog_path(@showblog)
-    end
-      def edit
-     @showrun = showblog.showruns.find_by(id: params[:id])
-  end
- def update
-       @showrun = @showblog.showruns.update(params[@showrun])
-@showrun.update(params[@showrun])
-     redirect_to showblog_path(@showblog)
-
-  end
-   
+ 
 # /showblogs/:showblog_id/showruns/:id(.:format)
 
 end
