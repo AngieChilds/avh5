@@ -13,25 +13,20 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
         end
     
   def destroy
-    @showshowblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.find_by_id(params[:id])
-    @showrun = @showblog.showruns.destroy
+      @showrun = showblog.showruns.find_by(id: params[:id])
+    @showruns.destroy
        redirect_to showblog_path(@showblog)
    end
 
    def show
-   @showblog = Showblog.find(params[:showblog_id])
-     @showrun = @showblog.showruns.find(params[:id])
-
+   @showrun = showblog.showruns.find_by(id: params[:id])
     redirect_to showblog_path(@showblog)
     end
       def edit
-      @showblog = Showblog.find(params[:showblog_id])
-        @showrun = @showblog.showruns.find(params[:id])
+     @showrun = showblog.showruns.find_by(id: params[:id])
   end
  def update
-    @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.update(params[@showrun])
+       @showrun = @showblog.showruns.update(params[@showrun])
 @showrun.update(params[@showrun])
      redirect_to showblog_path(@showblog)
 
@@ -39,10 +34,12 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
    
 # /showblogs/:showblog_id/showruns/:id(.:format)
 
+end
 
-  end
+ 
 
-  
+
+
 
 
   
