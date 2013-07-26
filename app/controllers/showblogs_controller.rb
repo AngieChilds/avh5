@@ -24,9 +24,7 @@ end
 
 def new
     @showblog = Showblog.new
-    redirect_to action: :index, id: @showblog.id
- 
-   end
+       end
 
  def create
     @showblog = Showblog.create(params[:showblog].permit(:name, :rundate, :spec_choice, :level_range, :note))
