@@ -4,7 +4,7 @@
 # before_filter :rundate_past, :only => [:show, :index]
      
     def index
-        @showblogs = Showblog.find.all
+        @showblogs = Showblog.all
     end
 def show
     @showblog = Showblog.find(params[:id])
