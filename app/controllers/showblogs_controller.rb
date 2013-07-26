@@ -15,12 +15,14 @@ end
     @showblog = Showblog.find(params[:id])
   end
  def update
-    @showblog = Showblog.find(params[:id].permit(:name, :rundate, :spec_choice, :level_range, :note))
+   @showblog = Showblog.find(params[:id])
+   if @showblog.update(params[:showblog].permit(:name, :rundate, :spec_choice, :level_range, :note))
   
-   @showblog.update(params[@showblog])
- redirect_to action: :index, id: @showblog.id
- 
+ redirect_to action: :show, id: @showblog.id
+   else
+     render 'edit'
   end
+ end
 
 def new
     @showblog = Showblog.new
@@ -50,4 +52,4 @@ def rundate_past
 
    
 end
- 
+
