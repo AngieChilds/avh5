@@ -42,7 +42,7 @@
     <td width="20%"><%= showblog.note %></td>
     <td width="9%"><%= link_to 'Show', showblog %></td>
     <td width="3%"><%= link_to 'Edit', edit_showblog_path(showblog) %></td>
-    <td width="3%"><%= link_to 'Destroy', showblog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td width="3%"><%= link_to 'Destroy', { action: :destroy, id: showblog.id}, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </tbody>
