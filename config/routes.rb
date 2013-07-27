@@ -1,6 +1,6 @@
 Avh5::Application.routes.draw do
-resource :showblogs  do
-resource :showruns
+resources :showblogs  do
+resources :showruns
 end
  
   root 'welcome#index'
