@@ -1,6 +1,6 @@
 Avh5::Application.routes.draw do
 resources :showblogs  do 
-resources :showruns, :name_prefix => "showblog"
+resources :showruns
 end
  
   root 'welcome#index'
