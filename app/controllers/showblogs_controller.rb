@@ -18,7 +18,7 @@ end
    @showblog = Showblog.find(params[:id])
    if @showblog.update(params[:showblog].permit(:name, :rundate, :spec_choice, :level_range, :note))
   
- redirect_to action: :show, id: @showblog.id
+ redirect_to action: :index, id: @showblog.id
    else
      render 'edit'
   end
@@ -31,7 +31,7 @@ def new
  def create
     @showblog = Showblog.create(params[:showblog].permit(:name, :rundate, :spec_choice, :level_range, :note))
   if @showblog.save
-      redirect_to action: :show, id: @showblog.id
+      redirect_to action: :index, id: @showblog.id
     else
       render 'new'
     end
