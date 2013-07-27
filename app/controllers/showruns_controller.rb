@@ -1,8 +1,10 @@
 class ShowrunsController < ApplicationController
 http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
-  def index
+  def destroy
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.all
+    @showrun = @showblog.showruns.find(params[:id])
+    @showrun.destroy
+    redirect_to showblog_path(@showblog)
     end
   
 
