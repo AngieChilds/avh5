@@ -1,5 +1,5 @@
 Avh5::Application.routes.draw do
-map.resources :showblogs  do |showblogs|
+resources :showblogs  do |showblogs|
 showblogs.resources :showruns, :name_prefix => "showblog"
 end
  
