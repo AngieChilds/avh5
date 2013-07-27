@@ -28,6 +28,9 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
       def edit
       @showblog = Showblog.find(params[:showblog_id])
         @showrun = @showblog.showruns.find_by_id(params[:id])
+        showruns#edit
+#showblog_showrun GET /showblogs/:showblog_id/showruns/:id(.:format)
+#/showblogs/12/showruns/1/edit
   end
  def update
     @showblog = Showblog.find(params[:showblog_id])
