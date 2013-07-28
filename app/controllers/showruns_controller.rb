@@ -17,10 +17,15 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
 
   def destroy
     @showshowblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.destroy(params[@showrun])
-           redirect_to showblog_path(@showblog)
+    @showrun = @showblog.showruns.find(params[:id])
+    @showrun.destroy
+     redirect_to showblog_path(@showblog)
          #  DELETE /showblogs/:showblog_id/showruns/:id(.:format)
    end
+  
+  
+
+
 
    def show
    @showblog = Showblog.find(params[:showblog_id])
@@ -30,7 +35,8 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
     end
       def edit
       @showblog = Showblog.find(params[:showblog_id])
-        @showrun = @showblog.showruns.find_by_id(params[:id])
+        @showrun = @showblog.showruns.find(params[:id])
+
         #showruns#edit showblog_showrun GET /showblogs/:showblog_id/showruns/:id(.:format)
 #/showblogs/12/showruns/1/edit
 # edit_showblog_showrun_path
@@ -44,8 +50,8 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
   end
 
 
-
 end
+
 
   
     
