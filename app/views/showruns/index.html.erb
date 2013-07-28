@@ -24,7 +24,7 @@
     <td width="15%"><%= showrun.level %></td>
     <td width="10%"><%= showrun.make_other %></td>
     <td width="20%"><%= showrun.note_showrun %></td>
-    <td width="5%" ><%= link_to 'Remove', [showrun.showblog, showrun], :confirm => 'Really remove showrun?', :method => :delete %></td>
+    <td width="5%" ><%= link_to 'Remove', { action: :destroy, id: showrun.id}, method: :delete, data: {confirm:  'Really remove showrun?'}  %></td>
     </tr>
 </tbody>
 
