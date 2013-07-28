@@ -1,5 +1,5 @@
 class ShowrunsController < ApplicationController
-http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
+#http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
  before_filter :load_showblog
   def index
     @showrun = @showblog.showruns.all
