@@ -15,7 +15,7 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
 
   def destroy
     @showrun = @showblog.showruns.find(params[:id])
-    @showrun.destroy
+    @showrun.destroy(params[:id])
      redirect_to showblog_showruns_path(@showblog)
          #  DELETE /showblogs/:showblog_id/showruns/:id(.:format)
    end
