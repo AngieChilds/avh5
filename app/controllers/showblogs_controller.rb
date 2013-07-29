@@ -40,7 +40,7 @@ def new
    def destroy
     @showblog = Showblog.find(params[:id])
     @showblog.destroy
-     redirect_to action: :index
+     redirect_to action: :show
      end
     
 def rundate_past
