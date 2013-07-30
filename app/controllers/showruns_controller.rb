@@ -8,7 +8,7 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
 
 
   def create
-    @showrun = @showblog.showruns.create(params[:showrun].permit(:player, :spec_vote, :event, :make_other, :note_showrun, :level))
+    @showrun = @showblog.showruns.create(showrun_params)
     redirect_to showblog_path(@showblog)
        # new_showblog_showrun GET    /showblogs/:showblog_id/showruns/new(.:format)
   end
@@ -18,39 +18,39 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
     @showrun.destroy
      redirect_to showblog_showruns_path(@showblog)
          #  DELETE /showblogs/:showblog_id/showruns/:id(.:format)
-   end
-  
-  
-
-
-
-   def show
+ end
+   
+ def show
     @showrun = @showblog.showruns.find_by_id(params[:id])
 #showruns#show PATCH  /showblogs/:showblog_id/showruns/:id(.:format)
-    redirect_to showblog_showruns_path(@showblog)
-    end
-      def edit
+    redirect_to showblog_showruns_path(@showblog, @showrun)
+end
+
+def edit
       @showrun = @showblog.showruns.find_by_id(params[:id])
 
         #showruns#edit showblog_showrun GET /showblogs/:showblog_id/showruns/:id(.:format)
 #/showblogs/12/showruns/1/edit
 # edit_showblog_showrun_path
-  end
+end
+
  def update
-
- @showrun = @showblog.showrun.find_by_id(params[:id])
- @showrun = @showblog.showruns.update(params[@showblog, @showrun])
-
-     redirect_to showblog_showruns_path(@showblog, @showrun)
+ if @showblog.showruns.update(showrun_params)
+    redirect_to showblog_showruns_path(@showblog, @showrun)
 #/showblogs/:showblog_id/showruns/:id(.:format
-
+ else
+   render 'edit'
  end
-
+ end
 
 private
 def load_showblog
  Showblog.find(params[:showblog_id])
 end
+def showrun_params
+  params.require(:showrun).permit(:name, :rundate, :spec_choice, :level_range, :note)
+end
+
 end
 
   
