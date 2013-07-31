@@ -1,6 +1,6 @@
 class ShowrunsController < ApplicationController
 http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
- before_filter :load_showblog
+ 
   def index
     @showrun = @showblog.showruns.all
    #showblog_showruns GET    /showblogs/:showblog_id/showruns(.:format)
@@ -8,12 +8,14 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
 
 
   def create
-    @showrun = @showblog.showruns.create(showrun_params)
+    @showrun = Showblog.find(params[:showblog_id])
+    @showrun = @showblog.showruns.create[:showrun].permit(:name, :rundate, :spec_choice, :level_range, :note)
     redirect_to showblog_path(@showblog)
        # new_showblog_showrun GET    /showblogs/:showblog_id/showruns/new(.:format)
   end
 
   def destroy
+     @showrun = Showblog.find(params[:showblog_id])
     @showrun = @showblog.showruns.find_by_id(params[:id])
     @showrun.destroy
      redirect_to showblog_showruns_path(@showblog)
@@ -21,12 +23,14 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
  end
    
  def show
+    @showrun = Showblog.find(params[:showblog_id])
     @showrun = @showblog.showruns.find_by_id(params[:id])
 #showruns#show PATCH  /showblogs/:showblog_id/showruns/:id(.:format)
     redirect_to showblog_showruns_path(@showblog, @showrun)
 end
 
 def edit
+   @showrun = Showblog.find(params[:showblog_id])
       @showrun = @showblog.showruns.find_by_id(params[:id])
 
         #showruns#edit showblog_showrun GET /showblogs/:showblog_id/showruns/:id(.:format)
@@ -34,8 +38,9 @@ def edit
 # edit_showblog_showrun_path
 end
 
- def update
- if @showblog.showruns.update(showrun_params)
+ def update 
+   @showrun = Showblog.find(params[:showblog_id])
+  if @showblog.showruns.update[:showrun].permit(:name, :rundate, :spec_choice, :level_range, :note)
     redirect_to showblog_showruns_path(@showblog, @showrun)
 #/showblogs/:showblog_id/showruns/:id(.:format
  else
@@ -43,13 +48,7 @@ end
  end
  end
 
-private
-def load_showblog
- Showblog.find(params[:showblog_id])
-end
-def showrun_params
-  params.require(:showrun).permit(:name, :rundate, :spec_choice, :level_range, :note)
-end
+
 
 end
 
