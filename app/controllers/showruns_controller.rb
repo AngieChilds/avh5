@@ -26,7 +26,7 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
     @showrun = Showblog.find(params[:showblog_id])
     @showrun = @showblog.showruns.find(params[:id])
 #showruns#show PATCH  /showblogs/:showblog_id/showruns/:id(.:format)
-    redirect_to showblog_showruns_path(@showblog, @showrun)
+    redirect_to showblog_path(@showblog)
 end
 
 def edit
@@ -41,7 +41,7 @@ end
  def update 
    @showrun = Showblog.find(params[:showblog_id])
   if @showblog.showruns.update[:showrun].permit(:player, :event, :spec_vote, :level, :note_showrun, :make_other)
-    redirect_to showblog_showruns_path(@showblog, @showrun)
+    redirect_to showblog_path(@showblog)
 #/showblogs/:showblog_id/showruns/:id(.:format
  else
    render 'edit'
