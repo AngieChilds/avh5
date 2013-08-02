@@ -8,7 +8,8 @@ http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :
 
 
   def create
-    @showrun = Showblog.find_by_id(params[:showblog_id])
+    @showrun = Showblog.(params[:showblog_id])
+    @showrun = @showblog.showruns.find(params[:id])
     @showrun = @showblog.showruns.create(params[:showrun].permit(:player, :event, :spec_vote, :level, :make_other, :note_showrun))
     redirect_to showblog_path(@showblog)
     # new_showblog_showrun GET    /showblogs/:showblog_id/showruns/new(.:format)
@@ -43,7 +44,8 @@ end
 
  def update 
    @showrun = Showblog.find(params[:showblog_id])
-  if @showblog.showruns.update(params[:showrun].permit(:player, :event, :spec_vote, :level, :make_other, :note_showrun))
+  @showrun = @showblog.showruns.find(params[:id])
+   if @showblog.showruns.update(params[:showrun].permit(:player, :event, :spec_vote, :level, :make_other, :note_showrun))
     redirect_to showblog_path(@showblog)
 #/showblogs/:showblog_id/showruns/:id(.:format
  else
