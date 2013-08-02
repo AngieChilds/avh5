@@ -40,7 +40,7 @@ def new
 def destroy
     @showblog = Showblog.find(params[:id])
     @showblog.destroy
-   redirect_to showblogs_path
+   redirect_to showblogs_url
 end
 
 
