@@ -1,5 +1,5 @@
 class ShowrunsController < ApplicationController
-http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
+http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
  
   def index
     @showrun = @showblog.showruns.all
@@ -8,13 +8,11 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
 
 
   def create
-    @showrun = Showblog.find(params[:showblog_id])
+    @showrun = Showblog.find_by_id(params[:showblog_id])
     @showrun = @showblog.showruns.create(params[:showrun].permit(:player, :event, :spec_vote, :level, :make_other, :note_showrun))
-    
     redirect_to showblog_path(@showblog)
-    
-       # new_showblog_showrun GET    /showblogs/:showblog_id/showruns/new(.:format)
-   end
+    # new_showblog_showrun GET    /showblogs/:showblog_id/showruns/new(.:format)
+  end
   
 
 
