@@ -10,9 +10,16 @@ http_basic_authenticate_with name: "mod", password: "help22", only: :destroy
   def create
     @showrun = Showblog.find(params[:showblog_id])
     @showrun = @showblog.showruns.create(params[:showrun].permit(:player, :event, :spec_vote, :level, :make_other, :note_showrun))
+    if @showrun.save
     redirect_to showblog_path(@showblog)
+    else
+      renden "new"
        # new_showblog_showrun GET    /showblogs/:showblog_id/showruns/new(.:format)
   end
+  end
+  
+
+
 
   def destroy
      @showblog = Showblog.find(params[:showblog_id])
