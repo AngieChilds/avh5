@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20130711210802) do
   create_table "showblogs", force: true do |t|
     t.string   "name"
     t.date     "rundate"
-    t.string   "spec"
-    t.string   "level"
+    t.string   "spec_choice"
+    t.string   "level_range"
     t.string   "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -25,9 +25,10 @@ ActiveRecord::Schema.define(version: 20130711210802) do
 
   create_table "showruns", force: true do |t|
     t.string   "player"
-    t.string   "vote"
+    t.string   "spec_vote"
     t.integer  "event"
-    t.boolean  "make"
+    t.boolean  "make_other"
+    t.string   "note_showrun"
     t.integer  "showblog_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
