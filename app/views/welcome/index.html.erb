@@ -1,12 +1,21 @@
-<h2>Welcome to AVH calculators and more.</h2>
-<br/>
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}} welcome to AVH calculators.</h1>
+    <br/>
 Seems to be working.
 <br/>
 All AVH rules apply here. <br/>
 Please report bad things written here to helpline. <br/>
-
-If this site crashes, oops, learning curve, send game mail to<br/>
-Pirate Princess
-<br/>
-
 <%= link_to "Showblog Blog", controller: "showblogs" %>
+
+    </div>
+  </body>
+</html
