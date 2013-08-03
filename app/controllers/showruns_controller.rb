@@ -34,16 +34,12 @@ end
 
 def edit
    @showblog = Showblog.find(params[:showblog_id])
-      @showrun = @showblog.showruns.find(params[:showrun_id])
-
-        #showruns#edit showblog_showrun GET /showblogs/:showblog_id/showruns/:id(.:format)
-#/showblogs/12/showruns/1/edit
-edit_showblog_showrun_path
+   @showrun = @showblog.showruns.find(params[:id])
 end
 
  def update 
    @showblog = Showblog.find(params[:showblog_id])
-  @showrun = @showblog.showruns.find(params[:showrun_id])
+  @showrun = @showblog.showruns.find(params[:id])
    if @showblog.showruns.update(params[:showrun].permit(:player, :event, :spec_vote, :level, :make_other, :note_showrun))
     redirect_to showblog_path(@showblog)
 #/showblogs/:showblog_id/showruns/:id(.:format
