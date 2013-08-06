@@ -40,9 +40,9 @@
     <td width="15%"><%= showblog.spec_choice %></td>
     <td width="15%"><%= showblog.level_range %></td>
     <td width="20%"><%= showblog.note %></td>
-    <td width="9%"><%= link_to 'Show', action: :show, id: showblog.id %></td>
-    <td width="3%"><%= link_to 'Edit', action: :edit, id: showblog.id %></td>
-    <td width="3%"><%= link_to 'Destroy', showblog_path(showblog), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td width="5%"><%= link_to 'Show', action: :show, id: showblog.id %></td>
+    <td width="5%"><%= link_to 'Edit', action: :edit, id: showblog.id %></td>
+    <td width="5%"><%= link_to 'Destroy', showblog_path(showblog), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </tbody>
