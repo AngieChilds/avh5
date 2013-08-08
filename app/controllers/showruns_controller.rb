@@ -48,9 +48,12 @@ end
  end
  end
 
-
-
+# @showblog.showrun.group(:spec_vote).count
 end
+
+
+
+
 
   
     
