@@ -25,9 +25,12 @@
   <%= @showblog.note %>
 </p>
 
+<p>
+  <b> Votes </b>
+<%= Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count %>
 
-<%= render count_votes %>
 
+</p>
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
 <tbody>
 
