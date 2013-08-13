@@ -24,7 +24,8 @@
   <b>Note:</b>
   <%= @showblog.note %>
 </p>
-
+<p><b>Vote current:</b>
+ <%= Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count %> </p>
 
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
 <tbody>

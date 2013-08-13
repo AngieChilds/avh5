@@ -44,7 +44,7 @@ def destroy
 end
 
 def count_votes
-  count_votes = Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count
+ Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count
 redirect_to action: :show, id: @showblog.id
 end
 
