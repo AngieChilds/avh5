@@ -4,7 +4,7 @@ class Showblog < ActiveRecord::Base
       length: { minimum: 2 }
 
 def self.search(voted)
-Showblog.where("showblog_id =?", params[:showblog_id]).joins(:showruns).group(:spec_vote).count
+Showblog.where("showblog_id =?", showblog_id).joins(:showruns).group(:spec_vote).count
 end
 
   
