@@ -27,7 +27,7 @@
 <p>
 <b>Vote current:</b>
 <br/>
-<%= render @voted %>
+<%= Showblog.where("showblog_id =?", params[:showblog_id]).joins(:showruns).group(:spec_vote).count %>
 <br/>
 
 
