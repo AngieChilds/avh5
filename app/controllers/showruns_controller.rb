@@ -49,8 +49,9 @@ end
  end
 
  def voted
-  
-  @voted = params[:voted]
+   @showblog = Showblog.find(params[:showblog_id])
+  @voted = Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count
+  render(:file => "/showblogs/show")
  end
 
 # @showblog.showrun.group(:spec_vote).count
