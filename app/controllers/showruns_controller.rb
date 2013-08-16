@@ -51,7 +51,7 @@ end
  def voted
   @showblog = Showblog.find(params[:showblog_id])
   @showrun = @showblog.showruns.all
-  @voted = Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count
+  @voted = Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count.to_a
   
  end
 
