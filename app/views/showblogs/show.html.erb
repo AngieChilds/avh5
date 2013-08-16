@@ -25,9 +25,8 @@
   <%= @showblog.note %>
 </p>
 <ul>
-<% @voted.each_pair do |spec, count| %>
-  <li> <%= "#{spec} #{count}" %><br/></li>
-  <% end %>
+<%= @voted.inspect %>
+ 
 </ul>
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
 <tbody>
