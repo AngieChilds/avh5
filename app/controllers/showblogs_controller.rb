@@ -43,11 +43,13 @@ def destroy
    redirect_to showblogs_url
 end
 
-def count_votes
- Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count
-redirect_to action: :show, id: @showblog.id
-end
 
+def voted
+   logger.error "-------------------------------------#{@showblog.inspect}"
+  @showblog = Showblog.find(params[:showblog_id])
+   @showrun = @showblog.showruns.all
+  logger.error "--------------------------------------#{@showblog.inspect}"
+end
 
    
 end
