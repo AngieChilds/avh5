@@ -24,8 +24,16 @@
   <b>Note:</b>
   <%= @showblog.note %>
 </p>
+<p> @showblog.showruns.group(count: "spec_vote") </p>
 <ul>
-<%= @showblog.showruns.explain(group: "spec_vote").count %>
+<%= @showblog.showruns.group(count: "spec_vote") %>
+ 
+</ul>
+
+<p> @showblog.showruns.all(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") </p>
+<ul>
+
+  <%= @showblog.showruns.all(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") %>
  
 </ul>
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
