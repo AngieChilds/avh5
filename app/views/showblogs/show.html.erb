@@ -29,7 +29,7 @@
   <b> The Voting so far:</b><br/>
 
 <%  @showblog.showruns.group(:spec_vote).count.each do |spec,count| %>
-<%= "#{spec} #{count}" %> <br/>
+<%= " Spec:#{spec} Votes: #{count}" %> <br/>
   <% end %>
 </p>
 
