@@ -1,6 +1,29 @@
 // Place all the styles related to the Showruns controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #ccfefe;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
 #showrun-list .list-line-even {
 background: #ccfefe;
 }
