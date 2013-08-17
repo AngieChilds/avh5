@@ -24,25 +24,30 @@
   <b>Note:</b>
   <%= @showblog.note %>
 </p>
-<p> @showblog.showruns.count(group: "spec_vote") </p>
-<ul>
+
+<p> @showblog.showruns.count(group: "spec_vote") 
+
 <%= @showblog.showruns.count(group: "spec_vote") %>
- 
-</ul>
+ </p>
 
-<p> @showblog.showruns(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") </p>
-<ul>
 
-  <%= @showblog.showruns(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") %>
+<p> @showblog.showruns.all(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") 
+
+
+  <%= @showblog.showruns.all(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") %>
  
-</ul><ul>
-<p>
-   @showblog.showruns(group: "spec_vote").count
 </p>
 
-<%= @showblog.showruns(group: "spec_vote").count %>
+<p>    @showblog.showruns(group: "spec_vote").distinct
 
-</ul>
+<%= @showblog.showruns(group: "spec_vote").distinct %>
+
+</p>
+<p> @showblog.showruns.group(:spec_vote).count
+
+<%=  @showblog.showruns.group(:spec_vote).count %>
+</p>
+
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
 <tbody>
 
