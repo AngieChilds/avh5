@@ -25,25 +25,8 @@
   <%= @showblog.note %>
 </p>
 
-<p> @showblog.showruns.count(group: "spec_vote") 
-
-<%= @showblog.showruns.count(group: "spec_vote") %>
- </p>
-
-
-<p> @showblog.showruns.all(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") 
-
-
-  <%= @showblog.showruns.all(:group => "spec_vote", :select => "spec_vote, COUNT(*) as count") %>
- 
-</p>
-
-<p>    @showblog.showruns(group: "spec_vote").distinct
-
-<%= @showblog.showruns(group: "spec_vote").distinct %>
-
-</p>
-<p> @showblog.showruns.group(:spec_vote).count
+<p>
+  <b> The Voting so far:</b><br/>
 
 <%=  @showblog.showruns.group(:spec_vote).count %>
 </p>
