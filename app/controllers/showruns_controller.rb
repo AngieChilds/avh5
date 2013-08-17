@@ -53,7 +53,7 @@ end
   logger.error "-----#{@showblog.inspect}"
    @showrun = @showblog.showruns.all
  logger.error "-----#{@showblog.inspect}"
-   @voted = Showblog.where(:showblog_id).joins(:showruns).group(:spec_vote).count
+   @showblog.showruns.count(group: "spec_vote")
   logger.error "-----#{@showblog.inspect}"
  end
 
