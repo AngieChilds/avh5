@@ -1,3 +1,4 @@
+
 <h1>Listing showblogs</h1>
 <ul>
   <li>If you would like to make your OWN run please click:</li>
@@ -29,12 +30,13 @@
   </tr>
 </tbody>
 </table>
+<div id="showblog-list">
 <% @showblogs.each do |showblog| %>
   <table class="horizontal_table" style="width: 100%; height: 10px;" border="1" cellspacing="0">
 <tbody>
 
 
-  <tr>
+  <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>
     <td width="20%" ><%= showblog.name %></td>
     <td width="15%"><%= showblog.rundate %></td>
     <td width="15%"><%= showblog.spec_choice %></td>
@@ -47,7 +49,7 @@
 <% end %>
 </tbody>
 </table>
-
+</div>
 <br />
 
 <%= link_to 'New Showblog', new_showblog_path %>
