@@ -25,7 +25,7 @@
   <%= @showblog.note %>
 </p>
 <ul>
-<%= @voted.inspect %>
+<%= Showblog.showruns.group(:spec_vote).count %>
  
 </ul>
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
