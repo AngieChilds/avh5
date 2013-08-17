@@ -48,14 +48,6 @@ end
  end
  end
 
- def voted
-  @showblog = Showblog.find_by_id(params[:showblog_id])
-  logger.error "-----#{@showblog.inspect}"
-   @showrun = @showblog.showruns.all
- logger.error "-----#{@showblog.inspect}"
-   @showblog.showruns.count(group: "spec_vote")
-  logger.error "-----#{@showblog.inspect}"
- end
 
 # @showblog.showrun.group(:spec_vote).count
 end
