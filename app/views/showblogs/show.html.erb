@@ -1,7 +1,7 @@
 
 <p>
   <b>Name:</b>
-<marquee scrollamount="3" ><h2> <%= @showblog.name %></h2></marquee>
+<marquee scrollamount="6" ><h2> <%= @showblog.name %></h2></marquee>
 </p>
 
 <p>
@@ -23,9 +23,12 @@
   <b>Note:</b>
   <%= @showblog.note %>
 </p>
-
-<%= @voted.inspect %>
-
+<p>
+  <b> The Voting so far:</b><br/>
+<% @showblog.showruns.group(:spec_vote).count.each do |spec,count|  %>
+Spec: <b><%=" #{spec}"%> </b> Votes: <b> <%=" #{count}" %> </b><br/>
+ <% end %>
+</p>
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
 <tbody>
 
