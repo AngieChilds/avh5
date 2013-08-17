@@ -53,7 +53,7 @@ end
   logger.error "-----#{@showblog.inspect}"
    @showrun = @showblog.showruns.all
  logger.error "-----#{@showblog.inspect}"
-   @voted = Showblog.showruns.group(:spec_vote).count
+   @voted = showblog.showruns.group(:spec_vote).count
   logger.error "-----#{@showblog.inspect}"
  end
 
