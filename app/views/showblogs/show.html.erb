@@ -24,13 +24,7 @@
   <%= @showblog.note %>
 </p>
 
-<p>
-  <b> The Voting so far:</b><br/>
-
-<%  @showblog.showruns.group(:spec_vote).count.each do |spec,count| %>
- Spec: <b><%=" #{spec}"%> </b> Votes: <b> <%=" #{count}" %> </b><br/>
-  <% end %>
-</p>
+<% render @showblogs.voted %>
 
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
 <tbody>
