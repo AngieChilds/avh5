@@ -1,6 +1,6 @@
   class ShowblogsController < ApplicationController
  http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
-
+before_filter :voted
 #before_filter :rundate_past, :only => [:show, :index]
      
     def index
@@ -45,10 +45,11 @@ end
 
 
 def voted
-   logger.error "-------------------------------------#{@showblog.inspect}"
-  @showblog = Showblog.find(params[:showblog_id])
-   @showrun = @showblog.showruns.all
-  logger.error "--------------------------------------#{@showblog.inspect}"
+   logger.error "-----------controller--------------------------#{@showblog.inspect}"
+ @showblog = Showblog.find(params[:showblog_id])
+ @showrun = @showblog.showruns.all
+ @voted = @showblog.showruns.group(:spec_vote).count
+  logger.error "---------------controlle-----------------------#{@showblog.inspect}"
 end
 
    
