@@ -47,12 +47,7 @@ end
    render 'edit'
  end
  end
-def voted
-   logger.error "-------------------------------------#{@showblog.inspect}"
-  @showblog = Showblog.find(params[:showblog_id])
-   @showrun = @showblog.showruns.all
-  logger.error "--------------------------------------#{@showblog.inspect}"
-end
+
 
 # @showblog.showrun.group(:spec_vote).count
 end
