@@ -8,5 +8,4 @@ module ApplicationHelper
   result.html_safe
 end
 
-
 end
