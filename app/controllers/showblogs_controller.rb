@@ -1,6 +1,6 @@
   class ShowblogsController < ApplicationController
  http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
-before_filter :voted
+
 #before_filter :rundate_past, :only => [:show, :index]
      
     def index
