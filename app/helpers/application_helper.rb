@@ -8,7 +8,7 @@ module ApplicationHelper
   result.html_safe
 end
 def rundate_past(showblog)
-    
+ @showblog = Showblog.find(params[:id])
 showblog.where(:rundate => ' < Time.now - 480.minutes' ).destroy
     
     end
