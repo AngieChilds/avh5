@@ -44,6 +44,7 @@ def destroy
 end
 private
 def rundate_past
+@showblogs = Showblog.all
 @showblog = Showblog.find(params[:id]) 
 if Showblog.where(:rundate => ' < Time.now - 480.minutes' )
 @showblog.destroy
