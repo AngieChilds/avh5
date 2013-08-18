@@ -9,8 +9,8 @@ module ApplicationHelper
 end
 def rundate_past(showblog)
  
-showblog.destroy_all(:rundate => ' < Time.now - 480.minutes' )
-
+showblog.where(:rundate => ' < Time.now - 480.minutes' ).each do @showblog.destroy
+end
  
     end
 
