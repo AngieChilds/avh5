@@ -4,11 +4,11 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode
   database: avh5_development
   pool: 5
-  username: avh5
+  username: 
   password:
 
 # Warning: The database defined as "test" will be erased and

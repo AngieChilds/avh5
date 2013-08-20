@@ -3,8 +3,6 @@ class Showrun < ActiveRecord::Base
     
   validates :player, presence: true,
       length: { minimum: 2 }
-   attr_accessor :voted
-  
- 
+   
 
 end

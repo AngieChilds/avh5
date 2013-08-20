@@ -2,7 +2,7 @@ class CreateShowblogs < ActiveRecord::Migration
   def change
     create_table :showblogs do |t|
       t.string :name
-      t.date :rundate
+      t.datetime :rundate
       t.string :spec_choice
       t.string :level_range
       t.string :note
