@@ -23,7 +23,10 @@
   Level: <%= f.text_field :level %><br/>
   
  Make other? <% f.radio_button :make_other, 'Yes',  :checked => true %>
- <%= f.radio_button :make_other_yes, 'Yes' %> <%= f.radio_button :make_other_no, 'No' %>
+ <% f.radio_button :make_other, 'Yes' %>
+ <%= f.label :make_other_yes, 'Yes' %>
+  <% f.radio_button :make_other, 'No' %>
+ <%= f.label :make_other_no, 'No' %>
  <br/>
   
 Note: <%= f.text_field :note_showrun %><br/>
