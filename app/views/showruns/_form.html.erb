@@ -8,21 +8,23 @@
    Player: <%= f.text_field :player %><br/>
    Events:<%= f.text_field :event %><br/>
    
- Spec : <% f.radio_button :spec_vote, 'Vote', :checked => true  %>
-	<%= f.radio_button :spec_vote, 'Vote'%>
+ Spec : <% f.radio_button_tag :spec_vote, 'Vote', :checked => true  %>
+	<%= f.radio_button_tag :spec_vote, 'Vote'%>
 	<%= f.label :spec_vote_vote, 'Vote' %>
-	<%= f.radio_button :spec_vote, 'English'  %>
+	<%= f.radio_button_tag :spec_vote, 'English'  %>
 	<%= f.label :spec_vote_english, 'English' %>
-	<%= f.radio_button :spec_vote, 'Jumper'%>
+	<%= f.radio_button_tag :spec_vote, 'Jumper'%>
 	<%= f.label :spec_vote_jumper, 'Jumper' %>
-	<%= f.radio_button :spec_vote, 'Western'%>
+	<%= f.radio_button_tag :spec_vote, 'Western'%>
 	<%= f.label :spec_vote_western, 'Western' %>
-	<%= f.radio_button :spec_vote, 'Racing'%>
+	<%= f.radio_button_tag :spec_vote, 'Racing'%>
 	<%= f.label :spec_vote_racing, 'Racing' %><br/>
 
   Level: <%= f.text_field :level %><br/>
   
- Make other? <%= f.select :make_other, ['Yes', 'No' ], :prompt => 'Select One' %><br/>
+ Make other? <% f.radio_button :make_other, 'Yes',  :checked => true %>
+ <%= f.radio_button_tag :make_other_yes, 'Yes' %> <%= f.radio_button_tag :make_other_no, 'No' %>
+ <br/>
   
 Note: <%= f.text_field :note_showrun %><br/>
   
