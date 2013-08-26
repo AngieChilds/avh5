@@ -3,37 +3,31 @@
     <div id="error_explanation">
       <h2><%= pluralize(@showblog.errors.count, "error") %> prohibited this showblog from being saved:</h2>
 <%end%>
+    </div>
+<div>
+   Player: <%= f.text_field :player %><br/>
+   Events:<%= f.text_field :event %><br/>
+   
+ Spec : <% f.radio_button :spec_vote, 'Vote', :checked => true  %>
+	<%= f.radio_button :spec_vote, 'Vote'%>
+	<%= f.label :spec_vote_vote, 'Vote' %>
+	<%= f.radio_button :spec_vote, 'English'  %>
+	<%= f.label :spec_vote_english, 'English' %>
+	<%= f.radio_button :spec_vote, 'Jumper'%>
+	<%= f.label :spec_vote_jumper, 'Jumper' %>
+	<%= f.radio_button :spec_vote, 'Western'%>
+	<%= f.label :spec_vote_western, 'Western' %>
+	<%= f.radio_button :spec_vote, 'Racing'%>
+	<%= f.label :spec_vote_racing, 'Racing' %><br/>
 
- <div class="field">
-    <%= f.label :player %><br />
-    <%= f.text_field :player %>
-  </div>
- <div class="field">
-    <%= f.label :event %><br />
-    <%= f.text_field :event %>
-  </div>
-
-      <div class="field">
-    <%= f.label :spec_vote %><br />
-    <%= f.select :spec_vote, ['English','Jumper', 'Racing', 'Western'], :prompt => 'Select One' %>
-  </div>
-   <div class="field">
-    <%= f.label :level %><br />
-    <%= f.text_field :level %>
-  </div>
-
-      <div class="field">
-    <%= f.label :make_other %><br />
-    <%= f.select :make_other, ['Yes', 'No' ], :prompt => 'Select One' %>
-  </div>
-   <div class="field">
-    <%= f.label :note_showrun %><br />
-    <%= f.text_field :note_showrun %>
-  </div>
-
-      <div class="actions">
+  Level: <%= f.text_field :level %><br/>
+  
+ Make other? <%= f.select :make_other, ['Yes', 'No' ], :prompt => 'Select One' %><br/>
+  
+Note: <%= f.text_field :note_showrun %><br/>
+  
     <%= f.submit %>
-  </div>
+  
 <% end %>
 
- 
+</div>
