@@ -11,9 +11,20 @@
     </div>
  <% end %>
 <div class="field">
-    Name   : <%= f.text_field :name %>
-    Rundate: <%= f.date_select :rundate %>
-    Spec :   <%= f.select :spec_choice, [ 'Vote', 'English', 'Jumper', 'Racing', 'Western' ], :prompt => 'Select One' %>
+    Name   : <%= f.text_field :name %><br/>
+    Rundate: <%= f.date_select :rundate %> <br/>
+    Spec :   <% f.radio_button :spec_choice, 'Vote', :checked => true  %>
+	<%= f.radio_button :spec_choice, 'Vote'%>
+	<%= f.label :spec_choice_vote, 'Vote' %>
+	<%= f.radio_button :spec_choice, 'English'  %>
+	<%= f.label :spec_choice_english, 'English' %>
+	<%= f.radio_button :spec_choice, 'Jumper'%>
+	<%= f.label :spec_choice_jumper, 'Jumper' %>
+	<%= f.radio_button :spec_choice, 'Western'%>
+	<%= f.label :spec_choice_western, 'Western' %>
+	<%= f.radio_button :spec_choice, 'Racing'%>
+	<%= f.label :spec_choice_racing, 'Racing' %><br/>
+   
     Level:  <%= f.text_field :level_range  %>
     Note   :<%= f.text_field :note %>
    
