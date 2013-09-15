@@ -3,6 +3,6 @@ class TackController < ApplicationController
    end
 
   def index
- @tack = params[:tack]
+ @tack = params[:tack].permit(:tack_item, :skill, :qty)
   end
 end
