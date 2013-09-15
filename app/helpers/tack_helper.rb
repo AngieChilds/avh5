@@ -24,7 +24,7 @@ skill = 100 if skill < 100
 return "#{(1+skill/99.9)}"
 end
 
-def tack(tack_item,skill,qty)
+def tack_calc(tack_item,skill,qty)
 
 qty = 1 if qty < 1
 skill = (skill * 1).to_i
