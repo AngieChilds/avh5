@@ -1,7 +1,7 @@
 Avh5::Application.routes.draw do
-  get "tack/show"
-  get "tack/index"
+ 
   get "calc/index"
+  get "calc/show"
 resources :showblogs  do 
 resources :showruns
 end

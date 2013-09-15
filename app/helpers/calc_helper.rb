@@ -1,5 +1,5 @@
 module CalcHelper
-def get_factor_from(horse)
+  def get_factor_from(horse)
 	type_bonus = (horse[:gender].to_i == 1 ? 32.0 : 25.0)
 	title_bonus = [1,1.02,1.04,1.06,1.08,1.10,1.12,1.14,1.16,1.18,1.20]
 	return "#{(type_bonus) * (title_bonus[horse[:title].to_i])}"
@@ -27,6 +27,3 @@ else
 end
 end
 end
-
-
-

@@ -1,17 +1,8 @@
 class CalcController < ApplicationController
+  def index
+  end
 
-def show
- @horse = params[:horse]
-  render(:file => "/calc/show")
+  def show
+  @horse = params[:horse]
+  end
 end
-def index
-render(:file => "/calc/index")
-end
- end
- 
- 
-
-
-  
-  
-  
