@@ -1,0 +1,10 @@
+<h1> Tack material calculator</h1>
+<div>
+<%form_tag(:action => :show) do %><br />
+
+Tack to create: <%= select("tack","tack_item",[["Full Set",0],["Bridle",1],["Horse Shoe",2],["Saddle pad",3],["Horse Boot",4],"Saddle",5]) %><br />
+Shape: <%= text_field("shape","skill")%><br />
+Quantity to make: <%= text_field("quantity","qty") %> <br/>
+<%= submit_tag("Submit") %>
+<% end %>
+</div>
