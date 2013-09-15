@@ -1,8 +1,9 @@
 class TackController < ApplicationController
   def show
-   end
+  @tack = params[:tack]
+  end
 
   def index
- @tack = params[:tack]
+ render 'tack/index'
   end
 end
