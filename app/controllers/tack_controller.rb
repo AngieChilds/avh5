@@ -3,5 +3,6 @@ class TackController < ApplicationController
    end
 
   def index
-   end
+ @tack = params[:tack]
+  end
 end
