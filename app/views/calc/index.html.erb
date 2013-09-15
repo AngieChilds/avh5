@@ -1,0 +1,49 @@
+<style>
+body
+{
+background-color:#d0e4fe;
+}
+h1
+{
+color:blue;
+text-align:center;
+}
+p
+{
+font-family:"Times New Roman";
+font-size:12px;
+}
+
+div
+{
+color:blue;
+text-align:center;
+}
+</style>
+<h1>Please fill in the blocks</h1>
+<h1>Test purpose only</h1>
+<div>
+<%form_tag(:action => :show) do %><br />
+Level: <%= text_field("show","level") %><br />
+Events: <%= text_field("show","events") %><br />
+Horse title:<%=select("horse","title",[["Store horse", 0],["Baronet or Baronetess", 1],["Baron or Baroness", 2],["Viscount or Viscountess", 3],["Count or Countess", 4],["Marquis or Marquise",5],["Duke or Duchess", 6],["Infante or Infanta", 7],["Prince or Princess", 8],["Grand Prince or Grand Princess", 9],["Archduke or Archduchess", 10]])%><br/>
+Gender:<%=select("horse","gender",[["Mare or stally", 0],["gelding",1]])%>
+Guild: <%= select("player","guild",[["Rider",0],["Equilibrium",1],["Trainer",2],["Manufacturer",3]])%><br />
+<%= submit_tag("Submit") %>
+<% end %>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
