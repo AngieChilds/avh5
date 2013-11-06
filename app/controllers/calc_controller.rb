@@ -5,5 +5,6 @@ class CalcController < ApplicationController
 
   def show
   @horse = params[:horse]
+  render(:file => "/calc/show")
   end
 end

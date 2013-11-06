@@ -1,7 +1,6 @@
 Avh5::Application.routes.draw do
+resources :arena
  
-  get "calc/index"
-  get "calc/show"
 resources :showblogs  do 
 resources :showruns
 end
