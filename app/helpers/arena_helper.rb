@@ -1,5 +1,5 @@
 module ArenaHelper
-def arena(current_skill,guild)
+def arena_calc(current_skill,guild)
 guild == 1 ? "<br />Arena clicks:#{(current_skill+1)*(current_skill+1)*(1+current_skill/45)/(45).to_i}" : "<br />Arena clicks:#{(current_skill+1)*(current_skill+1)*(1+current_skill/45)/(15).to_i}"
 end
 end

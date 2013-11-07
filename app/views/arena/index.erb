@@ -2,7 +2,7 @@
 <h1>Please fill in the blocks</h1>
 <h1>Arena advancement formula</h1>
 <div>
-<%form_tag(:action => :show) do %><br />
+<%form_tag(arena) do %><br />
 
 Current skill: <%= text_field("arena","current_skill") %><br />
 Guild: <%= select("player","guild",[["Trainer",0],["Trainer with magic",1]])%><br />
@@ -11,3 +11,8 @@ Guild: <%= select("player","guild",[["Trainer",0],["Trainer with magic",1]])%><b
 <% end %>
 
 </div>
+<p>
+  
+  <%= arena_calc(current_skill,guild) %>
+
+</p>
