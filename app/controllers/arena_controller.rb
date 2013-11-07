@@ -1,9 +1,10 @@
 class ArenaController < ApplicationController
 
 def show
-    render(:file => "/arena/show")
+  puts "==================!!==========================="
+    render 'show'
 end
 def index
-render(:file => "/arena/index")
+render 'index'
 end
  end

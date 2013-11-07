@@ -1,6 +1,8 @@
 Avh5::Application.routes.draw do
-resources :arena
- 
+resources :arena do
+
+end
+
 resources :showblogs  do 
 resources :showruns
 end
@@ -9,4 +11,5 @@ end
 
  
 end
+
 
