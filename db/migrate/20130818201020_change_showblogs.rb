@@ -1,4 +1,4 @@
-class AddColumnToShowblogs < ActiveRecord::Migration
+class AddColumnToShowblog < ActiveRecord::Migration
   def change
     add_column :my_note
        end
