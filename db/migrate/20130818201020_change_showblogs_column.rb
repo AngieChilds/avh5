@@ -1,5 +1,7 @@
 class ChangeShowblogs < ActiveRecord::Migration
   def change
-   
-    end
+    add_column :my_note
+       end
+       def self.down; end
+
   end
