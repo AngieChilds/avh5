@@ -1,0 +1,41 @@
+<%= form_for(@horselist) do |f| %>
+  <% if @horselist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@horselist.errors.count, "error") %> prohibited this horselist from being saved:</h2>
+
+      <ul>
+      <% @horselist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :player %><br>
+    <%= f.text_field :player %>
+  </div>
+  <div class="field">
+    <%= f.label :horse %><br>
+    <%= f.text_field :horse %>
+  </div>
+  <div class="field">
+    <%= f.label :currant_level %><br>
+    <%= f.number_field :currant_level %>
+  </div>
+  <div class="field">
+    <%= f.label :range %><br>
+    <%= f.text_field :range %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br>
+    <%= f.text_field :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

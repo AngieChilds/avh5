@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player: MyString
+  horse: MyString
+  currant_level: 1
+  range: MyString
+  date: 2013-11-08 15:10:44
+  note: MyString
+
+two:
+  player: MyString
+  horse: MyString
+  currant_level: 1
+  range: MyString
+  date: 2013-11-08 15:10:44
+  note: MyString

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @horselist.player %>
+</p>
+
+<p>
+  <strong>Horse:</strong>
+  <%= @horselist.horse %>
+</p>
+
+<p>
+  <strong>Currant level:</strong>
+  <%= @horselist.currant_level %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @horselist.date %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @horselist.note %>
+</p>
+
+<%= link_to 'Edit', edit_horselist_path(@horselist) %> |
+<%= link_to 'Back', horselists_path %>
