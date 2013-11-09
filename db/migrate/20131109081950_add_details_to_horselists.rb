@@ -8,6 +8,7 @@ class AddDetailsToHorselists < ActiveRecord::Migration
     add_column :horselists, :range6, :string
     add_column :horselists, :range7, :string
     add_column :horselists, :range8, :string
-    add_column :horselists, :range9, :stringrange10
+    add_column :horselists, :range9, :string
+   add_column :horselists, :range10, :string
   end
 end
