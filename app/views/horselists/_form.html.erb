@@ -21,7 +21,10 @@
    To be able to enter the shows made by high event players,<br/>
    you require an entering skill of 32.<br/>
    Range to enter:<br/>
-<%= f.check_box :range, 'ten' %>
+<%  @request.horselists.range.each.do |range| %>
+   <%= @f.fields_for range, index: range do |range_form|%>
+   <%= range_form.text_field :range %>
+  <%= f.check_box :range, 'ten' %>
   	<%= f.label :range_ten, 'Level 1- 10' %><br/>
    <%= f.check_box :range, 'twenty' %>
   	<%= f.label :range_twenty, 'Level 11- 20' %><br/>
@@ -43,6 +46,7 @@
   	<%= f.label :range_hundered, 'Level 91- 100' %><br/>
    <%= f.check_box :range, 'higher' %>
   	<%= f.label :range_higher, 'Higher shows' %><br/>
+        <%end%>
     <%= f.submit %>
   </div>
 <% end %>
