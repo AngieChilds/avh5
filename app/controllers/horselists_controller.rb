@@ -24,7 +24,7 @@ class HorselistsController < ApplicationController
   # POST /horselists
   # POST /horselists.json
   def create
-    @horselist = @request.horselists.new(horselist_params)
+    @horselist = @request.horselists.create(horselist_params)
 
     respond_to do |format|
       if @request.horselist.save

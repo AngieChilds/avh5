@@ -12,31 +12,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :player %><br>
-    <%= f.text_field :player %>
-  </div>
-  <div class="field">
-    <%= f.label :horse %><br>
-    <%= f.text_field :horse %>
-  </div>
-  <div class="field">
-    <%= f.label :currant_level %><br>
-    <%= f.number_field :currant_level %>
-  </div>
-  <div class="field">
-    <%= f.label :range %><br>
-    <%= f.text_field :range %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_field :note %>
-  </div>
-  <div class="actions">
+  <div >
+    Player: <%= f.text_field :player %><br/>
+   Horse name or number:<%= f.text_field :horse %><br/>
+   Current Level:<%= f.text_field :currant_level %><br/>
+   Choose any amount of shows to enter, keep in mind there is
+   over 4000 shows from level 1 - 100 <br/>
+   To be able to enter the shows made by high event players,<br/>
+   you require an entering skill of 32.<br/>
+   Range to enter:<br/>
+<%= f.check_box :range, '10' %>
+  	<%= f.label :range_10, 'Level 1- 10' %><br/>
+   <%= f.check_box :range, '20' %>
+  	<%= f.label :range_20, 'Level 11- 20' %><br/>
+   <%= f.check_box :range, '30' %>
+  	<%= f.label :range_30, 'Level 21- 30' %><br/>
+   <%= f.check_box :range, '40' %>
+  	<%= f.label :range_40, 'Level 31- 40' %><br/>
+   <%= f.check_box :range, '50' %>
+  	<%= f.label :range_50, 'Level 41- 50' %><br/>
+   <%= f.check_box :range, '60' %>
+  	<%= f.label :range_60, 'Level 51- 60' %><br/>
+   <%= f.check_box :range, '70' %>
+  	<%= f.label :range_70, 'Level 61- 70' %><br/>
+   <%= f.check_box :range, '80' %>
+  	<%= f.label :range_80, 'Level 71- 80' %><br/>
+   <%= f.check_box :range, '90' %>
+  	<%= f.label :range_90, 'Level 81- 90' %><br/>
+   <%= f.check_box :range, '100' %>
+  	<%= f.label :range_100, 'Level 91- 100' %><br/>
+   <%= f.check_box :range, '101' %>
+  	<%= f.label :range_101, 'Higher shows' %><br/>
     <%= f.submit %>
   </div>
 <% end %>
