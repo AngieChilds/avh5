@@ -1,26 +1,40 @@
-<h1>Listing requests</h1>
+<h1>Listing Requests</h1>
+<ul>
+  <li>If you would like to make your OWN request please click:</li>
+<li>:- new request -: and add your notes as you would choose.</li>
+<br/>
+<li>To join a request, this means you will enter particular levels</li>
+<li>Maybe show makers will offer to make a particular level of shows if they know there is entries</li>
+<br/>
 
-<table>
-  <thead>
-    <tr>
-      <th>Spec</th>
-      <th>Date</th>
-      <th>Note</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+</ul>
+<table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
+<tbody>
 
-  <tbody>
-    <% @requests.each do |request| %>
-      <tr>
-        <td><%= request.spec %></td>
-        <td><%= request.date %></td>
-        <td><%= request.note %></td>
-        <td><%= link_to 'Show', request %></td>
-        <td><%= link_to 'Edit', edit_request_path(request) %></td>
-        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>
+    <th width="25%" >Date</th>
+    <th width="25%" >Spec</th>
+    <th width="35%">Note</th>
+    <th width="5%"></th>
+    <th width="5%"></th>
+    <th width="5%"></th>
+
+  </tr>
+</tbody>
+</table>
+
+<div id="showblog-list">
+      <% @requests.each do |request| %>
+    <table class="horizontal_table" style="width: 100%; height: 10px;" border="1" cellspacing="0">
+<tbody>
+<tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+
+    <td width="25%"><%= request.date %></td>
+        <td width="25%"><%= request.spec %></td>
+        <td width="35%"><%= request.note %></td>
+        <td width="5%"><%= link_to 'Show', request %></td>
+        <td width="5%"><%= link_to 'Edit', edit_request_path(request) %></td>
+        <td width="5%"><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -29,3 +43,7 @@
 <br>
 
 <%= link_to 'New Request', new_request_path %>
+
+
+
+

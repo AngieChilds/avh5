@@ -1,19 +1,52 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Spec:</strong>
-  <%= @request.spec %>
-</p>
-
 <p>
   <strong>Date:</strong>
   <%= @request.date %>
 </p>
-
+<p>
+  <strong>Spec:</strong>
+  <%= @request.spec %>
+</p>
 <p>
   <strong>Note:</strong>
   <%= @request.note %>
 </p>
 
+<p>
+  <b>Number of horses at start level </b>
+<%= level_count(@request) %>
+
+  </</p>
+<p>
+  <b>Number of horses willing to enter ranges</b>
+<%= range_count(@request) %>
+</p>
+
+
+<table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
+<tbody>
+<table>
+      <tr>
+      <th width="15%">Player</th>
+     <th width="15%"> Horse</th>
+      <th width="15%">Current level</th>
+      <th width="15%">Range</th>
+    <th width="15%"> Date</th>
+   <th width="15%"> Note</th>
+    <th width="5%"> </th>
+    <th width="5%"> </th>
+        </tr>
+    </tbody>
+</table>
+
+
+<%= render @request.horselists %>
+
+<b>Add new horses looking for shows </b>
+
+<%= render 'horselists/form' %>
+
 <%= link_to 'Edit', edit_request_path(@request) %> |
 <%= link_to 'Back', requests_path %>
+
+

@@ -11,19 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    
-   Spec: <%= f.text_field :spec %><br/>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_field :note %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+ 
+<div class="field">
+    Date: <%= f.date_select :date %> <br/>
+    Spec :  <% f.radio_button :spec, 'Any', :checked => true  %>
+	<%= f.radio_button :spec, 'Any'%>
+	<%= f.label :spec_vote, 'Any' %>
+      	<%= f.radio_button :spec, 'English'  %>
+	<%= f.label :spec_english, 'English' %>
+	<%= f.radio_button :spec, 'Jumper'%>
+	<%= f.label :spec_jumper, 'Jumper' %>
+	<%= f.radio_button :spec, 'Western'%>
+	<%= f.label :spec_western, 'Western' %>
+	<%= f.radio_button :spec, 'Racing'%>
+	<%= f.label :spec_racing, 'Racing' %><br/>
+
+     Note   :<%= f.text_field :note %><br/>
+
+    <%= submit_tag 'submit' %>
   </div>
 <% end %>
