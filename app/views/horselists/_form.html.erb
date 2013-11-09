@@ -4,15 +4,11 @@
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this horselist from being saved:</h2>
 
-      <ul>
-      <% @request.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+       <% end %>
     </div>
-  <% end %>
+ 
 
-  <div >
+  <div>
     Player: <%= f.text_field :player %><br/>
    Horse name or number:<%= f.text_field :horse %><br/>
    Current Level:<%= f.text_field :currant_level %><br/>
@@ -44,7 +40,8 @@
   	<%= f.label :range9, 'Level 91- 100' %><br/>
    <%= f.check_box :range10, 'Higher shows' %>
   	<%= f.label :range10, 'Higher shows' %><br/>
-        <%end%>
+        
     <%= f.submit %>
-  </div>
+  
 <% end %>
+</div>
