@@ -21,31 +21,29 @@
    To be able to enter the shows made by high event players,<br/>
    you require an entering skill of 32.<br/>
    Range to enter:<br/>
-<%  @request.horselists.range.each.do |range| %>
-   <%= @f.fields_for range, index: range do |range_form|%>
-   <%= range_form.text_field :range %>
-  <%= f.check_box :range, 'ten' %>
-  	<%= f.label :range_ten, 'Level 1- 10' %><br/>
-   <%= f.check_box :range, 'twenty' %>
-  	<%= f.label :range_twenty, 'Level 11- 20' %><br/>
-   <%= f.check_box :range, 'thirty' %>
-  	<%= f.label :range_thirty, 'Level 21- 30' %><br/>
-   <%= f.check_box :range, 'forty' %>
-  	<%= f.label :range_forty, 'Level 31- 40' %><br/>
-   <%= f.check_box :range, 'fifty' %>
-  	<%= f.label :range_fifty, 'Level 41- 50' %><br/>
-   <%= f.check_box :range, 'sixty' %>
-  	<%= f.label :range_sixty, 'Level 51- 60' %><br/>
-   <%= f.check_box :range, 'seventy' %>
-  	<%= f.label :range_seventy, 'Level 61- 70' %><br/>
-   <%= f.check_box :range, 'eighty' %>
-  	<%= f.label :range_eighty, 'Level 71- 80' %><br/>
-   <%= f.check_box :range, 'ninety' %>
-  	<%= f.label :range_ninety, 'Level 81- 90' %><br/>
-   <%= f.check_box :range, 'hundered' %>
-  	<%= f.label :range_hundered, 'Level 91- 100' %><br/>
-   <%= f.check_box :range, 'higher' %>
-  	<%= f.label :range_higher, 'Higher shows' %><br/>
+
+  <%= f.check_box :range, 'Level 1- 10' %>
+  	<%= f.label :range, 'Level 1- 10' %><br/>
+   <%= f.check_box :range1, 'Level 11- 20' %>
+  	<%= f.label :range1, 'Level 11- 20' %><br/>
+   <%= f.check_box :range2, 'Level 21- 30' %>
+  	<%= f.label :range2, 'Level 21- 30' %><br/>
+   <%= f.check_box :range3, 'Level 31- 40' %>
+  	<%= f.label :range3, 'Level 31- 40' %><br/>
+   <%= f.check_box :range4, 'Level 41- 50' %>
+  	<%= f.label :range4, 'Level 41- 50' %><br/>
+   <%= f.check_box :range5, 'Level 51- 60' %>
+  	<%= f.label :range5, 'Level 51- 60' %><br/>
+   <%= f.check_box :range6, 'Level 61- 70' %>
+  	<%= f.label :range6, 'Level 61- 70' %><br/>
+   <%= f.check_box :range7, 'Level 71- 80' %>
+  	<%= f.label :range7, 'Level 71- 80' %><br/>
+   <%= f.check_box :range8, 'Level 81- 90' %>
+  	<%= f.label :range8, 'Level 81- 90' %><br/>
+   <%= f.check_box :range9, 'Level 91- 100' %>
+  	<%= f.label :range9, 'Level 91- 100' %><br/>
+   <%= f.check_box :range10, 'Higher shows' %>
+  	<%= f.label :range10, 'Higher shows' %><br/>
         <%end%>
     <%= f.submit %>
   </div>

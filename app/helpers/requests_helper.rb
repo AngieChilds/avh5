@@ -9,7 +9,7 @@ end
 def range_count(request)
   result = ''
   request.horselists.group(:range).count.each do |range,count|
-    result << "Range: #{level}  Count: #{count} <br/>"
+    result << "Range: #{range}  Count: #{count} <br/>"
     end
   result.html_safe
 end

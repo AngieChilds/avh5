@@ -69,7 +69,7 @@ class HorselistsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def horselist_params
-      @horselist = @request.horselists.require(params[:horselist].permit(:player, :horse, :currant_level, :date, :note, ranges_attributes: [:id, :level, :level_range] ))
+      @horselist = @request.horselists.require(params[:horselist].permit(:player, :horse, :currant_level, :date, :note, :range, :range1, :range2, :range3, :range4, :range5, :range6, :range7, :range6, :range7, :range8, :range9, :range10 ))
 
     
 end
