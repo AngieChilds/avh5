@@ -22,28 +22,28 @@
    
    Range to enter:<br/>
 
-  <%= check_box_tag(:range) %>
-  	<%= label_tag(:range, 'Level 1 - 10') %><br/>
-  <%= check_box_tag(:range1) %>
-  	<%= label_tag(:range1, 'Level 11 - 20') %><br/>
-        <%= check_box_tag(:range2) %>
-  	<%= label_tag(:range2, 'Level 21 - 30') %><br/>
-        <%= check_box_tag(:range3) %>
-  	<%= label_tag(:range3, 'Level 31- 40') %><br/>
-        <%= check_box_tag(:range4) %>
-  	<%= label_tag(:range4, 'Level 41- 50') %><br/>
-        <%= check_box_tag(:range5) %>
-  	<%= label_tag(:range5, 'Level 51- 60') %><br/>
-        <%= check_box_tag(:range6) %>
-  	<%= label_tag(:range6, 'Level 61- 70') %><br/>
-         <%= check_box_tag(:range7) %>
-  	<%= label_tag(:range7, 'Level 71 - 80') %><br/>
-         <%= check_box_tag(:range8) %>
-  	<%= label_tag(:range8, 'Level 81 - 90') %><br/>
-         <%= check_box_tag(:range9) %>
-  	<%= label_tag(:range9, 'Level 91 - 100') %><br/>
-         <%= check_box_tag(:range10) %>
-  	<%= label_tag(:range10, 'Higher') %><br/>
+  <%= f.check_box(:range) %>
+  	<%= f.label(:range, 'Level 1 - 10') %><br/>
+  <%= f.check_box(:range1) %>
+  	<%= f.label(:range1, 'Level 11 - 20') %><br/>
+        <%= f.check_box(:range2) %>
+  	<%= f.label(:range2, 'Level 21 - 30') %><br/>
+        <%= f.check_box(:range3) %>
+  	<%= f.label(:range3, 'Level 31- 40') %><br/>
+        <%= f.check_box(:range4) %>
+  	<%= f.label(:range4, 'Level 41- 50') %><br/>
+        <%= f.check_box(:range5) %>
+  	<%= f.label(:range5, 'Level 51- 60') %><br/>
+        <%= f.check_box(:range6) %>
+  	<%= f.label(:range6, 'Level 61- 70') %><br/>
+         <%= f.check_box(:range7) %>
+  	<%= f.label(:range7, 'Level 71 - 80') %><br/>
+         <%= f.check_box(:range8) %>
+  	<%= f.label(:range8, 'Level 81 - 90') %><br/>
+         <%= f.check_box(:range9) %>
+  	<%= f.label(:range9, 'Level 91 - 100') %><br/>
+         <%= f.check_box(:range10) %>
+  	<%= f.label(:range10, 'Higher') %><br/>
 Date: <%= f.date_select :date %> <br/>
 Note   :<%= f.text_field :note %><br/>
 
