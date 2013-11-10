@@ -84,9 +84,9 @@ def range10_count(request)
     end
   result.html_safe
 end
-def range_count(my_count)
+def range_count(request)
 result ''
-  params[:horselists][:range].collect{|c| c=="1"}.compact.count
+  request.horselists[:range].collect{|c| c=="1"}.compact.count
 result << " #{count}"
 
 result.html_safe
