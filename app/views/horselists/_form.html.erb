@@ -22,29 +22,29 @@
    
    Range to enter:<br/>
 
-  <%= f.check_box :range, :checked => false %>
-  	<%= f.label(:range, 'Level 1 - 10') %><br/>
-  <%= f.check_box(:range1, 'Level 11 - 20', :checked => false) %>
-  	<%= f.label(:range1, 'Level 11 - 20') %><br/>
-        <%= f.check_box(:range2, 'Level 21 - 30', :checked => false) %>
-  	<%= f.label(:range2, 'Level 21 - 30') %><br/>
-        <%= f.check_box(:range3, 'Level 31- 40', :checked => false) %>
-  	<%= f.label(:range3, 'Level 31- 40') %><br/>
-        <%= f.check_box(:range4, 'Level 41- 50', :checked => false) %>
-  	<%= f.label(:range4, 'Level 41- 50') %><br/>
-        <%= f.check_box(:range5, 'Level 51- 60', :checked => false) %>
-  	<%= f.label(:range5, 'Level 51- 60') %><br/>
-        <%= f.check_box(:range6, 'Level 61- 70', :checked => false) %>
-  	<%= f.label(:range6, 'Level 61- 70') %><br/>
-         <%= f.check_box(:range7, 'Level 71 - 80', :checked => false) %>
-  	<%= f.label(:range7, 'Level 71 - 80') %><br/>
-         <%= f.check_box(:range8, 'Level 81 - 90', :checked => false) %>
-  	<%= f.label(:range8, 'Level 81 - 90') %><br/>
-         <%= f.check_box(:range9, 'Level 91 - 100', :checked => false) %>
-  	<%= f.label(:range9, 'Level 91 - 100') %><br/>
-         <%= f.check_box(:range10, 'Higher', :checked => false) %>
-  	<%= f.label(:range10, 'Higher') %><br/>
-Note   :<%= f.text_field :note %><br/>
+        <%= f.check_box :range, :checked => false %>
+  	<%= f.label :range, 'Level 1 - 10'%><br/>
+        <%= f.check_box :range1, :checked => false %>
+  	<%= f.label :range1, 'Level 11 - 20' %><br/>
+        <%= f.check_box :range2, :checked => false %>
+  	<%= f.label :range2, 'Level 21 - 30' %><br/>
+        <%= f.check_box :range3, :checked => false %>
+  	<%= f.label :range3, 'Level 31- 40' %><br/>
+        <%= f.check_box :range4, :checked => false %>
+  	<%= f.label :range4, 'Level 41- 50' %><br/>
+        <%= f.check_box :range5, :checked => false %>
+  	<%= f.label :range5, 'Level 51- 60' %><br/>
+        <%= f.check_box :range6, :checked => false %>
+  	<%= f.label :range6, 'Level 61- 70'  %><br/>
+         <%= f.check_box :range7, :checked => false %>
+  	<%= f.label :range7, 'Level 71 - 80' %><br/>
+         <%= f.check_box :range8, :checked => false %>
+  	<%= f.label :range8, 'Level 81 - 90' %><br/>
+         <%= f.check_box(:range9, :checked => false %>
+  	<%= f.label :range9, 'Level 91 - 100' %><br/>
+         <%= f.check_box :range10, :checked => false %>
+  	<%= f.label :range10, 'Higher' %><br/>
+       Note : <%= f.text_field :note %><br/>
 
     <%= f.submit %>
   
