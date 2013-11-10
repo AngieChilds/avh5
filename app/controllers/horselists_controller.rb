@@ -28,7 +28,7 @@ class HorselistsController < ApplicationController
   def update
     @request = Request.find(params[:request_id])
  @horselist = @request.horselists.find(params[:id])
- if @horselist.update(params[:horselist].permit(:player, :horse, :currant_level, :date, :note, :range, :range1, :range2, :range3, :range4, :range5, :range6, :range7, :range6, :range7, :range8, :range9, :range10 ))
+ if @horselist.update(params[:horselist].permit(:player, :horse, :currant_level, :range, :range1, :range2, :range3, :range4, :range5, :range6, :range7, :range6, :range7, :range8, :range9, :range10, :date, :note ))
  redirect_to request_path(@request.horselist, @horselist)
  else
    render 'edit'
