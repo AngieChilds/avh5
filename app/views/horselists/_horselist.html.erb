@@ -1,0 +1,29 @@
+<div id="showrun-list">
+
+<table class="horizontal_table" style="width: 100%; height: 10px;" border="1" cellspacing="0">
+<tbody>
+
+    <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>" >
+    <td width="10%" ><%= horselist.player %></td>
+    <td width="14%"><%= horselist.horse %></td>
+    <td width="4%"><%= horselist.currant_level %></td>
+    <td width="4%"><%= horselist.range %></td>
+    <td width="4%"><%= horselist.range1 %></td>
+    <td width="4%"><%= horselist.range2 %></td>
+    <td width="4%"><%= horselist.range3 %></td>
+    <td width="4%"><%= horselist.range4 %></td>
+    <td width="4%"><%= horselist.range5 %></td>
+    <td width="4%"><%= horselist.range6 %></td>
+    <td width="4%"><%= horselist.range7 %></td>
+    <td width="4%"><%= horselist.range8 %></td>
+    <td width="4%"><%= horselist.range9 %></td>
+    <td width="4%"><%= horselist.range10 %></td>
+    <td width="10%"><%= horselist.date %></td>
+    <td width="10%"><%= horselist.note %></td>
+    <td width="4%" ><%= link_to 'Edit', edit_request_horselist_path(horselist.request, horselist)  %></td>
+    <td width="4%" ><%= link_to 'Remove', [@request, horselist], confirm: 'Are you sure?', method: :delete %></td>
+
+</tr>
+</tbody>
+</table>
+</div>
