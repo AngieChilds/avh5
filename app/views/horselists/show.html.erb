@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+
+<%= params.inspect %>
 <p>
   <strong>Player:</strong>
   <%= @horselist.player %>
@@ -11,7 +13,7 @@
 </p>
 
 <p>
-  <strong>Currant level:</strong>
+  <strong>Current level:</strong>
   <%= @horselist.currant_level %>
 </p>
 
@@ -19,10 +21,47 @@
   <strong>Range:</strong>
   <%= @horselist.range %>
 </p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range1 %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range2 %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range3 %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range4 %>
+</p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @horselist.date %>
+  <strong>Range:</strong>
+  <%= @horselist.range5 %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range6 %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range7 %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range8 %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range9 %>
+</p>
+<p>
+  <strong>Range:</strong>
+  <%= @horselist.range10 %>
 </p>
 
 <p>
@@ -30,5 +69,4 @@
   <%= @horselist.note %>
 </p>
 
-<%= link_to 'Edit', edit_horselist_path(@horselist) %> |
-<%= link_to 'Back', horselists_path %>
+<%= link_to 'Edit', edit_request_horselist_path(@request, horselist) %> |
