@@ -6,7 +6,7 @@ module RequestsHelper
     end
   result.html_safe
 end
-def range_count(request)
+def range0_count(request)
   result = ''
   request.horselists.group(:range).count.each do |range,count|
     result << "Level 1 - 10: #{count} <br/>"
@@ -84,5 +84,13 @@ def range10_count(request)
     end
   result.html_safe
 end
+def range_count(my_count)
+result ''
+  params[:horselists][:range].collect{|c| c=="1"}.compact.count
+result << " #{count}"
 
+result.html_safe
 end
+end
+
+
