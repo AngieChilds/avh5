@@ -16,8 +16,7 @@
   </thead>
 
   <tbody>
-    <% @horselists.each do |horselist| %>
-      <tr>
+        <tr>
         <td><%= horselist.player %></td>
         <td><%= horselist.horse %></td>
         <td><%= horselist.currant_level %></td>
@@ -34,14 +33,10 @@
         <td><%= horselist.range10 %></td>
         <td><%= horselist.date %></td>
         <td><%= horselist.note %></td>
-        <td><%= link_to 'Show', horselist %></td>
-        <td><%= link_to 'Edit', edit_horselist_path(horselist) %></td>
-        <td><%= link_to 'Destroy', horselist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_reuest_horselist_path(@request, @horselist) %></td>
+        <td><%= link_to 'remove', [@request, horselist], confirm: 'Are you sure?', method: :delete %></td>
       </tr>
-    <% end %>
+   
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Horselist', new_horselist_path %>
