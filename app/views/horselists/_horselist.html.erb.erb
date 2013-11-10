@@ -4,14 +4,24 @@
 <tbody>
 
     <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>" >
-    <td width="15%" ><%= horselist.player %></td>
-    <td width="15%"><%= horselist.horse %></td>
-    <td width="15%"><%= horselist.currant_level %></td>
-    <td width="15%"><%= horselist.range %></td>
-    <td width="15%"><%= horselist.date %></td>
-    <td width="15%"><%= horselist.note %></td>
-    <td width="5%" ><%= link_to 'Edit', edit_request_horselist_path(horselist.request, horselist)  %></td>
-    <td width="5%" ><%= link_to 'Remove', [@request, horselist], confirm: 'Are you sure?', method: :delete %></td>
+    <td width="10%" ><%= horselist.player %></td>
+    <td width="14%"><%= horselist.horse %></td>
+    <td width="4%"><%= horselist.currant_level %></td>
+    <td width="4%"><%= horselist.range %></td>
+    <td width="4%"><%= horselist.range1 %></td>
+    <td width="4%"><%= horselist.range2 %></td>
+    <td width="4%"><%= horselist.range3 %></td>
+    <td width="4%"><%= horselist.range4 %></td>
+    <td width="4%"><%= horselist.range5 %></td>
+    <td width="4%"><%= horselist.range6 %></td>
+    <td width="4%"><%= horselist.range7 %></td>
+    <td width="4%"><%= horselist.range8 %></td>
+    <td width="4%"><%= horselist.range9 %></td>
+    <td width="4%"><%= horselist.range10 %></td>
+    <td width="10%"><%= horselist.date %></td>
+    <td width="10%"><%= horselist.note %></td>
+    <td width="4%" ><%= link_to 'Edit', edit_request_horselist_path(horselist.request, horselist)  %></td>
+    <td width="4%" ><%= link_to 'Remove', [@request, horselist], confirm: 'Are you sure?', method: :delete %></td>
 
 </tr>
 </tbody>
