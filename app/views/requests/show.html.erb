@@ -13,20 +13,6 @@
 </p>
 
 
-<p>
-  <b>Number of horses willing to enter ranges of shows</b><br/>
-<%= range_count(@request) %>
-<%= range1_count(@request) %>
-<%= range2_count(@request) %>
-<%= range3_count(@request) %>
-<%= range4_count(@request) %>
-<%= range5_count(@request) %>
-<%= range6_count(@request) %>
-<%= range7_count(@request) %>
-<%= range8_count(@request) %>
-<%= range9_count(@request) %>
-<%= range10_count(@request) %>
-</p>
 
 <br/>
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1">
@@ -60,7 +46,7 @@
 <%= render 'horselists/form' %>
 
 
-<%= link_to 'Back to request', requests_path %>
+<%= link_to 'Back to request', requests_path %> <br/>
 <%= link_to "Showblog for the makers", controller: "showblogs" %><br/>
 <%= link_to "Home page", root_path %><br/>
 
