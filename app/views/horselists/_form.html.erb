@@ -3,11 +3,9 @@
   <% if @request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this horselist from being saved:</h2>
-
-       <% end %>
     </div>
- 
-
+       <% end %>
+    
   <div>
     Player: <%= f.text_field :player %><br/>
    Horse name or number:<%= f.text_field :horse %><br/>
@@ -47,5 +45,6 @@
        Note : <%= f.text_field :note %><br/>
 
     <%= f.submit 'Add a horse' %>
-  <% end %>
+  
 </div>
+<% end %>
