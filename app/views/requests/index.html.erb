@@ -31,8 +31,8 @@
 
     <td width="25%"><%= request.date %></td>
         <td width="25%"><%= request.spec %></td>
-        <td width="35%"><%= request.note %></td>
-        <td width="5%"><%= link_to 'Show', request %></td>
+        <td width="30%"><%= request.note %></td>
+        <td width="10%"><%= link_to 'Add a horse', request %></td>
         <td width="5%"><%= link_to 'Edit', edit_request_path(request) %></td>
         <td width="5%"><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -40,7 +40,7 @@
   </tbody>
 </table>
 
-<br>
+<br/>
 
 <%= link_to 'New Request', new_request_path %>
 
