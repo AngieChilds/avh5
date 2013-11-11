@@ -1,32 +1,68 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-  <head>
-    <title></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  </head>
-  <body>
-      <form id="new_horselist" class="new_horselist" method="post" >
+<style>
+#add_horse
+{
+position:relative;
+left:30px;
+margin:15;
+width:350px;
+border:2px solid;
+border-radius:25px;
+background-color:AliceBlue;
+font-family: verdana;
+font-size: 12px;
+padding:5px;
+}
+</style>
 
 
-          Player: <input id="horselist_player" type="text" name="horselist[player]"><br/>
-          Horse name:<input id="horselist_horse" type="text" name="horselist[horse]"><br/>
-          Current level:<input id="horselist_currant_level" type="text" name="horselist[currant_level]"><br/>
-          Choose the levels you would like to enter:<br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L1-10">Level 1 - 10 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L11-20">Level 11 - 20 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L21-30">Level 21 - 30 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L31-40">Level 31 - 40 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L41-50">Level 41 - 50 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L51-60">Level 51 - 60 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L61-70">Level 61 - 70 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L71-80">Level 71 - 80 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L81-90">Level 81 - 90 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="L91-100">Level 91 - 100 <br/>
-          <input id="horselist_range" type="checkbox" name="horselist[range]" value="higher">Level 100+ <br/>
-          <input id="horselist_note" type="text" name="horselist[note]" ><br/>
-          <input type="submit" value="click to send">
-      </form>
 
+<%= form_for([ @request, @request.horselists.build]) do |f| %>
+  <% if @request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request.errors.count, "error") %> prohibited this horselist from being saved:</h2>
+    </div>
+       <% end %>
 
-  </body>
-</html>
+  <div id="add_horse">
+    Player: <%= f.text_field :player %><br/>
+   Horse name or number:<%= f.text_field :horse %><br/>
+   Current Level:<%= f.text_field :currant_level %><br/>
+   <ul>
+   <li>Choose any amount of shows to enter, keep in mind there is
+   over 4000 shows from level 1 - 100. </li>
+   <li>To be able to enter the shows made by high event players,
+   you require an entering skill of 32 at present.</li><li>It is quite possible that you will
+   only be able to see shows made at a level of double your entering skill.</li>
+   <li>If you have an entering skill of 10, it is probably only possible to see
+   level 20 shows since they will have 40 events. </li>
+   </ul>
+   Range to enter:<br/>
+
+        <%= f.check_box :range, :checked => false %>
+  	<%= f.label :range, 'Level 1 - 10'%><br/>
+        <%= f.check_box :range1, :checked => false %>
+  	<%= f.label :range1, 'Level 11 - 20' %><br/>
+        <%= f.check_box :range2, :checked => false %>
+  	<%= f.label :range2, 'Level 21 - 30' %><br/>
+        <%= f.check_box :range3, :checked => false %>
+  	<%= f.label :range3, 'Level 31 - 40' %><br/>
+        <%= f.check_box :range4, :checked => false %>
+  	<%= f.label :range4, 'Level 41 - 50' %><br/>
+        <%= f.check_box :range5, :checked => false %>
+  	<%= f.label :range5, 'Level 51 - 60' %><br/>
+        <%= f.check_box :range6, :checked => false %>
+  	<%= f.label :range6, 'Level 61 - 70'  %><br/>
+         <%= f.check_box :range7, :checked => false %>
+  	<%= f.label :range7, 'Level 71 - 80' %><br/>
+         <%= f.check_box :range8, :checked => false %>
+  	<%= f.label :range8, 'Level 81 - 90' %><br/>
+         <%= f.check_box :range9, :checked => false %>
+  	<%= f.label :range9, 'Level 91 - 100' %><br/>
+         <%= f.check_box :range10, :checked => false %>
+  	<%= f.label :range10, 'Higher' %><br/>
+       Note : <%= f.text_field :note %><br/>
+
+    <%= f.submit 'Add a horse' %>
+
+</div>
+<% end %>
