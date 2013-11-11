@@ -1,3 +1,21 @@
+<style>
+#add_horse
+{
+width:300px;
+border:2px solid;
+border-radius:25px;
+background-color:AliceBlue;
+font-color:blue;
+
+}
+
+
+
+
+
+</style>
+
+
 
 <%= form_for([ @request, @request.horselists.build]) do |f| %>
   <% if @request.errors.any? %>
@@ -6,7 +24,7 @@
     </div>
        <% end %>
     
-  <div>
+  <div id="add_horse">
     Player: <%= f.text_field :player %><br/>
    Horse name or number:<%= f.text_field :horse %><br/>
    Current Level:<%= f.text_field :currant_level %><br/>
