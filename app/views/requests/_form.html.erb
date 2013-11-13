@@ -1,3 +1,19 @@
+<style type="form" >
+#add_request
+{
+position:relative;
+left:30px;
+margin:15px;
+width:350px;
+border:2px solid;
+border-radius:25px;
+background-color:Mistyrose;
+font-family: verdana;
+font-size: 12px;
+padding:5px;
+}
+</style>
+
 <%= form_for(@request) do |f| %>
   <% if @request.errors.any? %>
     <div id="error_explanation">
@@ -12,7 +28,7 @@
   <% end %>
 
  
-<div class="field">
+<div id="add_request">
     Date: <%= f.date_select :date %> <br/>
     Spec :  <% f.radio_button :spec, 'Any', :checked => true  %>
 	<%= f.radio_button :spec, 'Any'%>
