@@ -12,6 +12,10 @@ font-family: verdana;
 font-size: 12px;
 padding:5px;
 }
+h1
+{
+color:#FF00FF;
+}
 </style>
 
 <%= form_for(@request) do |f| %>
@@ -29,6 +33,9 @@ padding:5px;
 
  
 <div id="add_request">
+  <h1> New Request </h1>
+  <p>Please choose a spec, once you have set request, click the 'add horse' </p>
+  
     Date: <%= f.date_select :date %> <br/>
     Spec :  <% f.radio_button :spec, 'Any', :checked => true  %>
 	<%= f.radio_button :spec, 'Any'%>
