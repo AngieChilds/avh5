@@ -45,8 +45,8 @@ end
  end
  end
 def edit
-    @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.find(params[:id])
+    showblog = Showblog.find(params[:showblog_id])
+    @showrun = showblog.showruns.find(params[:id])
   end
 
 # @showblog.showrun.group(:spec_vote).count
