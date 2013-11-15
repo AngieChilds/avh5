@@ -1,43 +1,5 @@
 <h1>Editing showblog</h1>
-<%= f.fields_for :showruns, @showblog.showruns do |c| %>
-
-<div>
-   Player: <%= c.text_field :player %><br/>
-   Events:<%= c.text_field :event %><br/>
-
- Spec : <% c.radio_button :spec_vote, 'Vote', :checked => true  %>
-	<%= c.radio_button :spec_vote, 'Vote'%>
-	<%= c.label :spec_vote_vote, 'Vote' %>
-	<%= c.radio_button :spec_vote, 'English'  %>
-	<%= c.label :spec_vote_english, 'English' %>
-	<%= c.radio_button :spec_vote, 'Jumper'%>
-	<%= c.label :spec_vote_jumper, 'Jumper' %>
-	<%= c.radio_button :spec_vote, 'Western'%>
-	<%= c.label :spec_vote_western, 'Western' %>
-	<%= c.radio_button :spec_vote, 'Racing'%>
-	<%= c.label :spec_vote_racing, 'Racing' %><br/>
-
-  Level: <%= c.text_field :level %><br/>
-
- Make other? <% c.radio_button :make_other, 'Yes',  :checked => true %>
- <%= c.radio_button :make_other, 'Yes' %>
- <%= c.label :make_other_yes, 'Yes' %>
-  <%= c.radio_button :make_other, 'No' %>
- <%= c.label :make_other_no, 'No' %>
- <br/>
-
-Note: <%= c.text_field :note_showrun %><br/>
-
-    <%= c.submit %>
-
-<% end %>
-
-
-
-
-
-
-
+<%= render 'form' %>
 
 
 
