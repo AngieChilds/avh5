@@ -4,7 +4,7 @@
 #before_filter :rundate_past
      
     def index
-        @showblogs = Showblog.order("event DESC").all
+        @showblogs = Showblog.all
     end
 def show
     @showblog = Showblog.find(params[:id])
