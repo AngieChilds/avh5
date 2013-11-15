@@ -1,5 +1,5 @@
 <h1>Editing showrun</h1>
- <%= form_for([@showblog, @showblog.showruns]) do |f| %>
+ <%= form_for([@showblog.showruns]) do |f| %>
 
    Player: <%= f.text_field :player %><br/>
    Events:<%= f.text_field :event %><br/>
