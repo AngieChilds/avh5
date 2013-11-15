@@ -1,34 +1,8 @@
 <h1>Editing showrun</h1>
  
- <div class="field">
-    <%= f.label :player %><br />
-    <%= f.text_field :player %>
-  </div>
- <div class="field">
-    <%= f.label :event %><br />
-    <%= f.text_field :event %>
-  </div>
+<%= render 'form' %>
 
-      <div class="field">
-    <%= f.label :spec_vote %><br />
-    <%= f.select :spec_vote, ['English','Jumper', 'Racing', 'Western'], :prompt => 'Select One' %>
-  </div>
-   <div class="field">
-    <%= f.label :level %><br />
-    <%= f.text_field :level %>
-  </div>
 
-      <div class="field">
-    <%= f.label :make_other %><br />
-    <%= f.select :make_other, ['Yes', 'No' ], :prompt => 'Select One' %>
-  </div>
-   <div class="field">
-    <%= f.label :note_showrun %><br />
-    <%= f.text_field :note_showrun %>
-  </div>
 
-      <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
+<%= link_to 'Edit', edit_showblog_showrun_path(@showblog, @showrun) %> |
+<%= link_to 'Back', showblog_showruns_path(@showblog) %>
