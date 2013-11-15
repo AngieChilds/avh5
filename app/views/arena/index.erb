@@ -12,7 +12,7 @@ Guild: <%= select("player","guild",[["Trainer",0],["Trainer with magic",1]])%><b
 
 </div>
 <p>
-  
-  <%= arena_calc(current_skill,guild) %>
-
+  <%= arena(params[:arena][:current_skill].to_i, params[:player][:guild].to_i) %>
+ 
 </p>
+

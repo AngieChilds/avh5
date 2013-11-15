@@ -31,7 +31,7 @@
 </table>
 
 <div id="showblog-list">
-<% @showblogs.each do |showblog| %>
+<% @showblogs.order("event DESC").each do |showblog| %>
   <table class="horizontal_table" style="width: 100%; height: 10px;" border="1" cellspacing="0">
 <tbody>
 

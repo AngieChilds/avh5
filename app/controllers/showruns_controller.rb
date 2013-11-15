@@ -2,7 +2,7 @@ class ShowrunsController < ApplicationController
 http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
  
   def index
-    @showrun = @showblog.showruns.all
+    @showrun = @showblog.showruns.all.order("event DESC")
    #showblog_showruns GET    /showblogs/:showblog_id/showruns(.:format)
   end
 
