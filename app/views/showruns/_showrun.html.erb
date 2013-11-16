@@ -11,7 +11,7 @@
     <td width="15%"><%= showrun.level %></td>
     <td width="10%"><%= showrun.make_other %></td>
     <td width="20%"><%= showrun.note_showrun %></td>
-    <td width="5%" ><%= link_to 'Edit', edit_showblog_showrun_path(@showblog, @showrun)  %></td>
+    <td width="5%" ><%= link_to 'Edit', edit_showblog_showrun_path(@showblog.showrun , @showrun)  %></td>
     <td width="5%" ><%= link_to 'Remove', [@showblog, showrun], confirm: 'Are you sure?', method: :delete %></td>
 
 </tr>
