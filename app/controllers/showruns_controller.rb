@@ -37,7 +37,7 @@ end
  def update 
    showblog = Showblog.find(params[:showblog_id])
   @showrun = showblog.showruns.find(params[:id])
-   if @showrun.update(params[:showrun].permit(:showblog_id, :player, :event, :spec_vote, :level, :make_other, :note_showrun))
+   if @showrun.update(params.require(:showrun).permit(:showblog_id, :player, :event, :spec_vote, :level, :make_other, :note_showrun))
     redirect_to showblog_path(@showrun.showblog, @showrun)
 #/showblogs/:showblog_id/showruns/:id(.:format
  else
