@@ -1,5 +1,5 @@
 class ShowrunsController < ApplicationController
-http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
+http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy]
  
   def index
     @showrun = @showblog.showruns.all
@@ -46,7 +46,7 @@ end
  end
 def edit
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showrun.find(params[:id])
+    @showrun = @showblog.showruns.find(params[:id])
      end
 
 # @showblog.showrun.group(:spec_vote).count
