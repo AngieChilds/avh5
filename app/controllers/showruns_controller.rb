@@ -47,7 +47,7 @@ end
  end
 def edit
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.find(params[:id].permit!)
+    @showrun = @showblog.showruns.find(params[:id])
      end
 
 # @showblog.showrun.group(:spec_vote).count
