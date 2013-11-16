@@ -10,11 +10,12 @@
     <td width="10%"><%= showrun.spec_vote %></td>
     <td width="15%"><%= showrun.level %></td>
     <td width="10%"><%= showrun.make_other %></td>
-    <td width="20%"><%= showrun.note_showrun %></td>
+    <td width="10%"><%= showrun.note_showrun %></td>
     <td width="5%" ><%= link_to 'Edit', edit_showblog_showrun_path(showrun.showblog, showrun)  %></td>
     <td width="5%" ><%= link_to 'Remove', [@showblog, showrun], confirm: 'Are you sure?', method: :delete %></td>
-
-</tr>
+ <td width="5%" ><%= link_to 'my-X', [@showblog, showrun], confirm: 'Are you sure?', method: :get %></td>
+<td width="5%" ><%= link_to 'show', [@showblog, showrun] %></td>
+    </tr>
 
 </tbody>
 </table>
