@@ -1,4 +1,4 @@
-<%= form_for([@showblog, @showblog.showruns]) do |f| %>
+<%= form_for([@showblog, @showblog.showruns.build]) do |f| %>
   <div>
    Player: <%= f.text_field :player %><br/>
    Events:<%= f.text_field :event %><br/>
