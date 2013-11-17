@@ -1,9 +1,10 @@
 class ShowrunsController < ApplicationController
 http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy]
- 
+helper_method :sort_column, :sort_direction
   def index
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.all
+    @showrun = @showblog.showruns.order(sort_column + " " + sort_direction)
+
    #showblog_showruns GET    /showblogs/:showblog_id/showruns(.:format)
   end
 
@@ -50,7 +51,14 @@ def edit
     @showrun = @showblog.showruns.find(params[:id])
      end
 
-# @showblog.showrun.group(:spec_vote).count
+private
+def sort_column
+  Showblog.showruns.column_names.includes?(params[:sort]) ? params[:sort] : "player"
+end
+def sort_direction
+  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+end
+
 end
 
 
