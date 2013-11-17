@@ -1,9 +1,9 @@
 class ShowrunsController < ApplicationController
 http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy]
-helper_method :sort_column, :sort_direction
+
   def index
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.order(sort_column + " " + sort_direction)
+    @showrun = @showblog.showruns.all
 
    #showblog_showruns GET    /showblogs/:showblog_id/showruns(.:format)
   end
