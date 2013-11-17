@@ -7,10 +7,16 @@ def vote_spec(showblog)
   end
   result.html_safe
 end
-
-
 #default_scope { order ('event') }
- end
+def past_show(showblog)
+
+showblog.where(:rundate => ' < Time.now - 480.minutes' )
+@showblog.destroy
+redirect_to showblogs_url
+
+end
+
+   end
   
 
   
