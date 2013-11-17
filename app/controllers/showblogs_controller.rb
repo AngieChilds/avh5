@@ -1,6 +1,6 @@
   class ShowblogsController < ApplicationController
  http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy, :edit]
-
+helper_method :sort_column, :sort_direction
 #before_filter :rundate_past
      
     def index
@@ -51,5 +51,14 @@ if Showblog.where(:rundate => ' < Time.now - 480.minutes' )
 redirect_to showblogs_url
 end
 end
+private
+def sort_column
+  Showblog.showruns.column_names.includes?(params[:sort]) ? params[:sort] : "player"
+end
+def sort_direction
+  %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+end
+
+
 end
 
