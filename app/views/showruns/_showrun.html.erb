@@ -3,7 +3,7 @@
 
 <table class="horizontal_table" style="width: 100%; height: 10px;" border="1" cellspacing="0">
 <tbody>
-  <% @showblogs.showruns.each do |showrun| %>
+  <% @showruns.each do |showrun| %>
     <tr valign="top" class="<%= cycle('list-line-odd', 'list-line-even') %>" >
     <td width="20%" ><%= showrun.player %></td>
     <td width="15%"><%= showrun.event %></td>
