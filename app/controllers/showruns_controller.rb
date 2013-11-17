@@ -53,7 +53,7 @@ def edit
 
 private
 def sort_column
-  Showblog.showruns.column_names.includes?(params[:sort]) ? params[:sort] : "player"
+  @showblog.showruns.column_names.includes?(params[:sort]) ? params[:sort] : "player"
 end
 def sort_direction
   %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
