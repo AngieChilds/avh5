@@ -7,9 +7,8 @@ def vote_spec(showblog)
   end
   result.html_safe
 end
-def sort_event
-  showblog.showruns.group(:event).order('event asc')
-end
+
+
 #default_scope { order ('event') }
  end
   
