@@ -3,7 +3,7 @@ http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy]
 
   def index
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.order('event').all
+    @showrun = @showblog.showruns.default_scope { order ('event') }
 
    #showblog_showruns GET    /showblogs/:showblog_id/showruns(.:format)
   end
