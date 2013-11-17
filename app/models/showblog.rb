@@ -1,9 +1,14 @@
 class Showblog < ActiveRecord::Base
       
   has_many :showruns,  dependent: :destroy
-      accepts_nested_attributes_for :showruns
-  validates :name, presence: true,
+       validates :name, presence: true,
       length: { minimum: 2 }
-  
+
+
+  def self.all_ordered_by_showruns
+   includes(:event).order('event.attribute ASC')
+end
+
+
 end
 
