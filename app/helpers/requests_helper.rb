@@ -8,7 +8,7 @@ module RequestsHelper
 end
 def range0_count(request)
   result = ''
-  request.horselists.group(:range).to_i.sum.each do |range,sum|
+  request.horselists.group(:range0).to_i.sum.each do |range,sum|
     result << "Level 1 - 10:#{range} #{sum} <br/>"
     end
   result.html_safe
