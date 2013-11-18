@@ -1,0 +1,13 @@
+
+<%= form_tag @animal do %>
+<div id="choose_animal"
+     <h1>Edit this animal</h1>
+
+<%= select(:animal, :type, [['Sheep', 1],['Horse',2],['Camel',3]]) %>
+<%= text_field :owner %>
+<%= text_field (:name, "Please name me")  %>
+<%= text_field (:hunger, "1")  %>
+<%= text_field (:food, "10" ) %>
+     <%= submit 'Update animal' %>
+</div>
+<% end %>
