@@ -8,12 +8,12 @@ helper_method :sort_column, :sort_direction
     end
 def show
     @showblog = Showblog.find(params[:id])
-  
-end
+  end
 
   def edit
     @showblog = Showblog.find(params[:id])
   end
+
  def update
    @showblog = Showblog.find(params[:id])
    if @showblog.update(params[:showblog].permit(:name, :rundate, :spec_choice, :level_range, :note))
@@ -26,7 +26,7 @@ end
 
 def new
     @showblog = Showblog.new
-       end
+end
 
  def create
     @showblog = Showblog.create(params[:showblog].permit(:name, :rundate, :spec_choice, :level_range, :note))

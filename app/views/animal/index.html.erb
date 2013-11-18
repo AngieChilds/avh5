@@ -1,0 +1,34 @@
+<h1>Animal#index</h1>
+<p>Find me in app/views/animal/index.html.erb</p>
+<table>
+  <tbody>
+    <tr>
+      <th>Animal</th>
+      <th>Owner</th>
+      <th>Name</th>
+      <th>hunger</th>
+      <th>Food</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </tbody>
+ </table>
+<%= @animals.each do |animal| %>
+<table>
+ <tbody>
+    <tr>
+      <td><%= animal.type %></td>
+      <td><%= animal.owner %></td>
+      <td><%= animal.name %></td>
+      <td><%= animal.hunger %></td>
+      <td><%= animal.food %></td>
+      <td><%= link_to 'show' action: :show, id: animal.id %></td>
+      <td><%= link_to 'edit' action: :edit, id: animal.id %></td>
+      <td><%= link_to 'return to the wild' animal_path(animal), method: :delete, data: {confirm: 'really set it free?'} %></td>
+    </tr>
+    <% end %>
+    </tbody>
+ </table>
+
+<h2><%= link_to 'New animal' new_animal_path %> </h2>
