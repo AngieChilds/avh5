@@ -1,2 +1,2 @@
-module AnimalHelper
+module AnimalsHelper
 end
