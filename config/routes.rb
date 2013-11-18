@@ -1,9 +1,7 @@
 Avh5::Application.routes.draw do
+resources :animals do
   
-
-  get "animal/index"
-  get "animal/show"
-  get "animal/edit"
+end
 resources :requests do
 resources :horselists
   end
