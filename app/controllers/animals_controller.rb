@@ -1,5 +1,12 @@
 class AnimalsController < ApplicationController
-def new
+
+  def index
+    @animals = Animal.all
+end
+
+  
+
+  def new
     @animal = Animal.new
 end
 def update
@@ -11,9 +18,7 @@ def update
     end
 end
   
-def index
-    @animals = Animal.all
-end
+
 
 def show
     @animal = Animal.find(params[:id])
