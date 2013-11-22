@@ -20,11 +20,11 @@ text-shadow: 5px 5px 5px #FF00FF;
 
 
 
-<%= form_tag @animal do %>
+<%= form_tag @animal do |animal| %>
 <div id="choose_animal"
      <h1>Choose an animal</h1>
 
-<%= select(:animal, :type, [['Sheep', 1],['Horse',2],['Camel',3]]) %>
+<%= select(:animal, :breed, [['Sheep', 1],['Horse',2],['Camel',3]]) %>
 <%= text_field :owner %>
 <% text_field (:name, "Please name me" ) %>
 <% text_field (:hunger, "1" ) %>
