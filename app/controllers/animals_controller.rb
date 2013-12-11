@@ -1,46 +1,45 @@
 class AnimalsController < ApplicationController
-
-  def index
-    @animals = Animal.all
+def index
+  @animals = Animal.all
 end
-
-  
-
-  def new
-    @animal = Animal.new
-end
-def update
-    @animal = Animal.find(params[:id])
-    if @animal.update(params[:animal].permit(:type, :owner, :name, :hunger, :food))
-     redirect_to action: :index, id: @animal.id
-     else
-      render 'edit'
-    end
-end
-  
-
 
 def show
     @animal = Animal.find(params[:id])
-end
+  end
 
-def edit
+  def edit
     @animal = Animal.find(params[:id])
-end
+  end
 
-def create
-    @animal = Animal.create(params[:animal].permit(:type, :owner, :name, :hunger, :food))
-    if animal.save
+  def update
+    @animal = Animal.find(params[:id])
+    if @animal.feed(params[:animal].permit(:food, :hunger, :name))
+      
+       redirect_to action: :index, id: @animal.id
+   else
+     render 'edit'
+    end
+  end
+  
+  def new
+    @animal = Animal.new
+  end
+
+  def create
+    @animal = Animal.new(params[:animal].permit(:breed, :owner))
+    if @animal.save
+      flash[:notice] = "you have a new animal"
       redirect_to action: :index, id: @animal.id
     else
-      render 'new'
+      render :new
     end
-end
+  end
 def destroy
-  @animal = Animal.find(params[:id])
-  @animal.destroy
-  redirect_to animals_url
-
+   @animal = Animal.find(params[:id])
+   @animal.destroy
+   redirect_to animals_url
 end
 
+ 
 end
+
