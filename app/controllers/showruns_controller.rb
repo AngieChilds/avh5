@@ -48,7 +48,7 @@ end
  end
 def edit
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.find(params.require[:id])
+    @showrun = @showblog.showruns.find(params.require[:id].permit!)
      end
 
 private
