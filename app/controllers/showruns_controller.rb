@@ -39,7 +39,7 @@ end
  def update 
    showblog = Showblog.find(params[:showblog_id])
   @showrun = showblog.showruns.find(params[:id])
-   if @showblog.showruns.update(params(:showrun).permit!)
+   if @showrun.update(params.require(:showrun).permit!)
     redirect_to showblog_path(@showblog)
 #/showblogs/:showblog_id/showruns/:id(.:format
  else
@@ -48,7 +48,7 @@ end
  end
 def edit
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.find(params[:id])
+    @showrun = @showblog.showruns.find(params.require[:id])
      end
 
 private
