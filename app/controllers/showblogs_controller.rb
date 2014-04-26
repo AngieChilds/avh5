@@ -8,6 +8,7 @@ helper_method :sort_column, :sort_direction
     end
 def show
     @showblog = Showblog.find(params[:id])
+   
   end
 
   def edit

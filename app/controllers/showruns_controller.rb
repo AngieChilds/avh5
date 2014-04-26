@@ -3,7 +3,7 @@ http_basic_authenticate_with name: "mod", password: "help22", only: [:destroy]
 
   def index
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.find(:all, :order => 'event')
+    @showrun = @showblog.showruns.find(:all).order(event: "ASC")
 
    #showblog_showruns GET    /showblogs/:showblog_id/showruns(.:format)
   end
@@ -39,7 +39,7 @@ end
  def update 
    showblog = Showblog.find(params[:showblog_id])
   @showrun = showblog.showruns.find(params[:id])
-   if @showrun.update(params.require(:showrun).permit!)
+   if @showrun.update(params(:showrun).permit!)
     redirect_to showblog_path(@showblog)
 #/showblogs/:showblog_id/showruns/:id(.:format
  else
@@ -48,7 +48,7 @@ end
  end
 def edit
     @showblog = Showblog.find(params[:showblog_id])
-    @showrun = @showblog.showruns.find(params.require[:id].permit!)
+    @showrun = @showblog.showruns.find(params[:id])
      end
 
 private

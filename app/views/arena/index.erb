@@ -2,17 +2,13 @@
 <h1>Please fill in the blocks</h1>
 <h1>Arena advancement formula</h1>
 <div>
-<%form_tag do %><br />
+  <%= form_tag({:action => "index"}, {:method => "get", :remote => true }) do %>
 
-Current skill: <%= text_field("arena","current_skill") %><br />
+ Current skill: <%= text_field("arena","current_skill") %><br />
 Guild: <%= select("player","guild",[["Trainer",0],["Trainer with magic",1]])%><br />
 
 <%= submit_tag("Submit") %>
 <% end %>
 
 </div>
-<p>
-  <%= arena(params[:arena][:current_skill].to_i, params[:player][:guild].to_i) %>
- 
-</p>
 

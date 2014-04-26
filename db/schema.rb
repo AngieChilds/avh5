@@ -11,27 +11,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130711210802) do
+ActiveRecord::Schema.define(version: 20131118213823) do
+
+  create_table "animals", force: true do |t|
+    t.string   "breed"
+    t.string   "owner"
+    t.string   "name"
+    t.integer  "hunger"
+    t.integer  "food"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "horselists", force: true do |t|
+    t.string   "player"
+    t.string   "horse"
+    t.integer  "currant_level"
+    t.string   "range"
+    t.datetime "date"
+    t.string   "note"
+    t.integer  "request_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "range1"
+    t.string   "range2"
+    t.string   "range3"
+    t.string   "range4"
+    t.string   "range5"
+    t.string   "range6"
+    t.string   "range7"
+    t.string   "range8"
+    t.string   "range9"
+    t.string   "range10"
+  end
+
+  create_table "requests", force: true do |t|
+    t.string   "spec"
+    t.datetime "date"
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "showblogs", force: true do |t|
     t.string   "name"
-    t.date     "rundate"
+    t.datetime "rundate"
     t.string   "spec_choice"
     t.string   "level_range"
     t.string   "note"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "showruns", force: true do |t|
     t.string   "player"
     t.string   "spec_vote"
     t.integer  "event"
-    t.boolean  "make_other"
+    t.string   "make_other"
     t.string   "note_showrun"
+    t.integer  "level"
+    t.integer  "show_count"
     t.integer  "showblog_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "showruns", ["showblog_id"], name: "index_showruns_on_showblog_id"

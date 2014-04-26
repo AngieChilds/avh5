@@ -1,8 +1,9 @@
 class ArenaController < ApplicationController
-
+def create
+  render 'index'
+  end
 def show
-  puts "==================!!==========================="
-    render 'show'
+render 'show'
 end
 def index
 render 'index'

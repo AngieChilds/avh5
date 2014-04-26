@@ -8,7 +8,14 @@ def vote_spec(showblog)
   result.html_safe
 end
 #default_scope { order ('event') }
+def sorted_runs(showrun)
+  showblog.showruns.order(:event)
+  
+end
+
+
 def past_show(showblog)
+
 
 showblog.where(:rundate => ' < Time.now - 480.minutes' )
 @showblog.destroy
