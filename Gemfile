@@ -9,6 +9,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'railties'
 
 group :doc do
     gem 'sdoc', require: false
@@ -17,9 +18,8 @@ end
 group :developement do
   gem 'better_errors'
   gem 'thin'
- gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
- gem 'sqlite3'
- gem 'quiet_assets'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
+  gem 'sqlite3'
 end
 
 
