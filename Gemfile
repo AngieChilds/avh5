@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'railties'
-
+gem 'json'
 group :doc do
     gem 'sdoc', require: false
 end
